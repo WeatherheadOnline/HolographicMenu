@@ -3,7 +3,7 @@
   --bkgd-featured: #091b3e;
   --fonts: #beecfb;
   --links: #54cdf3;
-  --bkgd-sheer: #091b3eAA;
+  --bkgd-sheer: #091b3eCC;
   --bkgd-form: #091b3e88;
   --greyed-out: #606060;
   --checkbox-btn: #3e092a;
@@ -73,6 +73,9 @@ body {
     border-radius: 0.5rem;
     color: var(--links);
     background-color: var(--bkgd-featured);  
+}
+#pointer-dismiss {
+    cursor: pointer;
 }
 
 

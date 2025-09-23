@@ -65,3 +65,18 @@ function holoMenuOff() {
     holographButtons.style.display = "none";
     holoIcon.style.display = "block";
 }
+
+
+/* Dismiss the "pointer" tooltip */
+
+const pointerDismiss = document.getElementById("pointer-dismiss");
+const pointer = document.getElementById("pointer");
+
+pointerDismiss.addEventListener("click", dismissPointer);
+holoIcon.addEventListener("click", dismissPointer);
+
+function dismissPointer() {
+    pointer.style.display = "none";
+    pointerDismiss.removeEventListener("click", dismissPointer);
+    holoIcon.removeEventListener("click", dismissPointer);
+}
