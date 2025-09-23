@@ -61,24 +61,47 @@ body {
   padding: 0.2rem 0.5rem;
   max-height: min-content;
   font-size: 1rem;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--links);
-    color: var(--links);
-    background-color: var(--bkgd-featured);  
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--links);
+  color: var(--links);
+  background-color: var(--bkgd-featured);  
 }
 #holograph-menu span {  /* (the input menu's "close" button) */
   padding: 0 0.5rem;
   font-size: 2rem;
   line-height: 1.5rem;
-    border: 2px solid var(--links);
-    color: var(--links);
-    background-color: var(--bkgd-featured);  
+  border: 2px solid var(--links);
+  color: var(--links);
+  background-color: var(--bkgd-featured);  
 }
-#pointer-dismiss {
-    cursor: pointer;
+#pointer {
+  z-index: 4;
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  transform: rotate(-10deg);
+  display: flex;
+  gap: 0;
+  background-color: var(--bkgd-sheer);
+  p {
+    margin: 0;
+  }
 }
-
+#pointer-text {
+  height: min-content;
+  padding: 0.5rem;
+}
+#pointer-symbols {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p {
+    line-height: 0.8em;
+  }
+}
+#pointer-dismiss {cursor: pointer;}
+.bigger {font-size: 2em;}
 
 /* ~~~ Optional styling for the input menu ~~~ */
 
@@ -87,24 +110,24 @@ body {
   background-color: var(--bkgd-featured);
 }
 #holograph-buttons {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .holomenu-btn, #holograph-menu span {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 
 /* ~~~ For the rest of the page ~~~ */
 
 body {
-    width: 90vw;
-    margin: 0 auto;
-    font-family: "Verdana", sans-serif;
-    background-color: var(--bkgd);
-    color: var(--fonts);
-    @media screen and (hover) {
-        width: clamp(20rem, 50vw, 40rem);
-    }
+  width: 90vw;
+  margin: 0 auto;
+  font-family: "Verdana", sans-serif;
+  background-color: var(--bkgd);
+  color: var(--fonts);
+  @media screen and (hover) {
+      width: clamp(20rem, 50vw, 40rem);
+  }
 }
 .center-text {
   text-align: center;
@@ -126,32 +149,7 @@ main {
   background-color: var(--bkgd-sheer)
 }
 #home-link p {margin: 0;}
-.bigger {font-size: 2em;}
-#pointer {
-  z-index: 4;
-  position: fixed;
-  bottom: 4rem;
-  right: 1rem;
-  transform: rotate(-10deg);
-  display: flex;
-  gap: 0;
-    background-color: var(--bkgd-sheer);
-    p {
-        margin: 0;
-    }
-}
-#pointer-text {
-    height: min-content;
-    padding: 0.5rem;
-}
-#pointer-symbols {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    p {
-        line-height: 0.8em;
-    }
-}
+
 h1, h2 {
   max-width: 70vw;
   margin-left: auto;
