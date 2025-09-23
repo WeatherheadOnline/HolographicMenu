@@ -1,0 +1,176 @@
+/* ~~~ Required styling ~~~ */
+
+body {
+  position: relative;
+}
+#holograph-menu {
+  position: fixed;
+  z-index: 4;
+  @media screen and (hover) {
+  
+  /* ~~~ Important: ~~~ */
+  /* ~~~ Un-comment the following line so that the menu is only active on touchscreen devices ~~~ */
+  
+/*     display: none; */   
+    
+  }
+}    
+
+#holograph-icon svg {
+  width: 2.2rem;
+  height: auto;
+  stroke: var(--fonts);   
+  border: 3px solid var(--fonts);
+}
+#holograph-buttons {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+
+/* ~~~ Optional styling for the input menu ~~~ */
+
+#holograph-menu {
+  bottom: 1rem;  
+  right: 1rem;  
+}
+#holograph-icon svg {
+  border-radius: 3px;
+  background-color: var(--bkgd-featured);
+}
+#holograph-buttons {margin-bottom: 0.5rem;}
+.holomenu-btn {
+  padding: 0.2rem 0.5rem;
+  max-height: min-content;
+  font-size: 1rem;
+}
+#holograph-menu span {
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+}
+.holomenu-btn, #holograph-menu span {
+  color: var(--links);
+  border: 2px solid var(--links);
+  background-color: var(--bkgd-featured);  
+  border-radius: 0.5rem;
+}
+
+
+/* ~~~ For the rest of the page ~~~ */
+
+:root {
+  --bkgd: #020421;
+  --bkgd-featured: #091b3e;
+  --fonts: #beecfb;
+  --links: #54cdf3;
+  --bkgd-sheer: #091b3eAA;
+  --bkgd-form: #091b3e88;
+  --greyed-out: #606060;
+}
+body {
+  width: 90vw;
+  margin: 0 auto;
+  font-family: "Verdana", sans-serif;
+  background-color: var(--bkgd);
+  color: var(--fonts);
+  @media screen and (hover) {
+    width: clamp(20rem, 50vw, 50rem);
+}
+}
+.center-text {
+  text-align: center;
+}
+a {
+  color: var(--links);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#home-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: min-content;
+  padding: 0.5rem;
+  background-color: var(--bkgd-sheer)
+}
+#home-link p {margin: 0;}
+#pointer {
+  z-index: 4;
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  transform: rotate(-10deg);
+  background-color: var(--bkgd-sheer);
+  p {
+    margin: 0;
+  }
+  p.bigger {
+    text-align: right;
+    margin-right: 1rem;
+  }
+}
+.bigger {font-size: 2em;}
+h1, h2 {
+  max-width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Georgia", serif;
+}
+.asterisk {color: rgb(255, 27, 50);}
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+fieldset {
+  position: relative;
+  padding: 0.5rem 3vw;
+  @media screen and (hover) {
+    padding: 0.5rem 1rem;
+  }
+}
+.inputText, .labelText {display: block;}
+.inputText {
+  width: calc(100% - 1rem);
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 1rem;
+}
+input, textarea {
+  color: var(--fonts);
+  background-color: var(--bkgd-form);
+  border: 1px solid var(--fonts);
+} 
+.side-by-side {
+  width: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 10%;
+  row-gap: 1rem;
+}
+.side-by-side > * {
+  width: 100%;
+  @media screen and (hover) {
+    width: 45%;
+  }
+}
+#buttonsWrapper button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--fonts);
+  border: 2px solid var(--fonts);
+  background-color: var(--bkgd-featured);  
+}
+#buttonsWrapper button#clearForm:active {
+  background-color: var(--bkgd);
+}
+#buttonsWrapper button:disabled {
+  color: var(--greyed-out);
+}
+footer {margin: 5rem auto;}

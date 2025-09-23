@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Easy form inputs for mobile devices</title>
+        <meta ref="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <div id="pointer" class="center-text">
+            <p>Click the icon</p><p>to see</p><p>the input menu</p><p class="bigger">&#8681</p>
+            </div> 
+
+            <!-- Add the following div to your page, as a direct child of the body -->
+
+            <div id="holograph-menu">
+            <div id="holograph-icon">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
+                <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
+                </svg>
+            </div>
+            <div id="holograph-buttons">  <!-- This container gets autofilled with buttons for each input element -->
+            </div>
+        </div>
+
+            <!----- End of required div ----->
+
+        <div id="home-link">
+            <a href="#intro" class="center-text"><p>Back to top</p></a>
+        </div>
+
+        <main>
+            
+        <header id="intro">
+            <h1 class="center-text">Mobile-friendly "input menu"</h1>
+            <h2 class="center-text">Improve your users' mobile experience for form inputs</h2>    
+        </header>
+            
+        <div>
+            <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just.. reach... a bit higher... with your thumb...</p>
+            <p>This handy input-menu tool brings each of your page's form inputs within easy reach of your users' thumb. </p>
+            <p>Just add the included class and property to each of your form inputs (see JS tab for instructions). The input menu will be automatically populated with a button for each form input. When the button is tapped, focus is placed on the matching form input.</p>
+            <a href="http://www.WeatherheadOnline.com" target="_blank" class="center-text">
+                <p>On your phone? See my portfolio for a live demo</p>
+            </a>
+
+        </div>
+        
+        <div id="input-form">
+            <form>
+            <fieldset>
+                
+                <label for="userName" class="labelText">Here's a required field<span class="asterisk">*</span>
+                <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Required field" required >
+                </label>
+
+                <label for="returnAddress" class="labelText">An email address
+                <span class="asterisk">*</span>
+                <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
+                </label>
+                
+                <label for="subject" class="labelText">This field is optional
+                <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Optional field" >
+                </label>
+            
+                <label for="body" class="labelText">Textarea elements hold more text
+                <span class="asterisk">*</span>
+                <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="A text area" rows="4" cols="60" required ></textarea>
+                </label>
+                
+                <div id="buttonsWrapper" class="side-by-side">
+                <button type="reset" id="clearForm">Clear the form</button>
+                <button id="submitEmail" disabled >Send message</button>
+                </div>
+
+            </fieldset>
+            </form>
+        </div>
+        <div id="postscript">
+            <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
+            <p>If you have any questions, or any suggestions for improvement, please let me know! My email address is listed in the <a href="http://www.weatherheadonline.com/#Contact" target="_blank">contact section</a> of my portfolio site.</p>
+        </div>
+        </main> 
+        <footer class="center-text">
+        <a href="http://www.WeatherheadOnline.com" target="_blank">
+            <p>Made by &copy; www.WeatherheadOnline.com</p>
+        </a> 
+        </footer>
+        <script src="js/holographic.js"></script>
+    </body>
+</html>
