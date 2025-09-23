@@ -6,9 +6,11 @@
     </head>
 
     <body>
+
+
         <!-- Add the following divs to your page, as direct children of the body -->
         
-        <div id="pointer" class="center-text">
+        <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
             <div id="pointer-text">
                 <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
             </div>
@@ -28,7 +30,8 @@
             <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
         </div>
 
-            <!----- End of required div ----->
+        <!----- End of required divs ----->
+
 
         <div id="home-link">
             <a href="#intro" class="center-text"><p>Back to top</p></a>
@@ -124,7 +127,7 @@
                 <form>
                     <fieldset>
                         <legend>Here's a second form.</legend>
-                        <p>Its matching input-menu buttons have a different colored border.</p>
+                        <p>Its matching input-menu buttons have a <span>different colored border</span>.</p>
                         <div class="side-by-side">
                             <label for="userName2" class="labelText">A required field<span class="asterisk">*</span>
                                 <input type="text" id="userName2" class="inputText holograph-menu" name="userName2" data-holomenu="Required field 2" required >

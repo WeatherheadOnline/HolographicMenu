@@ -11,21 +11,23 @@
   --radio-btn: #29093e;
 }
 
-/* ~~~ Required styling ~~~ */
+
+/* ~~~ Required styling. Substitute your preferred colors and length values. ~~~ */
 
 body {
   position: relative;
 }
 #holograph-menu {
   position: fixed;
+  bottom: 1rem;  
+  right: 1rem;  
   z-index: 4;
   @media screen and (hover) {
   
-  /* ~~~ Important: ~~~ */
-  /* ~~~ Un-comment the following line so that the menu is only active on touchscreen devices ~~~ */
+        /* ~~~ Important: ~~~ */
+        /* ~~~ Un-comment the following line so that the menu is only active on touchscreen devices ~~~ */
   
-/*     display: none; */   
-    
+        /*     display: none; */   
   }
 }    
 
@@ -45,25 +47,16 @@ body {
 /* Color-coded button backgrounds for different input types */
 .holomenu-btn.checkbox-color {background-color: var(--checkbox-btn);}
 .holomenu-btn.radio-color {background-color: var(--radio-btn);}
-.holomenu-btn.text-color {/* default */} 
-.holomenu-btn.email-color {/* default */}
+.holomenu-btn.text-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */} 
+.holomenu-btn.email-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */}
 
 /* Color-coded borders for input menu buttons from different forms */
+/* Add form-specific rules here, using this selector: 
+    .holomenu-btn.[your form's name attribute]-border */
 .holomenu-btn.form1-border {border-color: var(--form1-btns);}
-.holomenu-btn.default-border {/* default */}
+.holomenu-btn.form_2-boder {/* if nothing is specified, buttons default to the generic rule for .holomenu-btn */}
+.holomenu-btn.default-border {/* for forms without a name attribute, buttons are given this class name */}
 
-
-/* ~~~ Optional styling for the input menu ~~~ */
-
-#holograph-menu {
-  bottom: 1rem;  
-  right: 1rem;  
-}
-#holograph-icon svg {
-  border-radius: 3px;
-  background-color: var(--bkgd-featured);
-}
-#holograph-buttons {margin-bottom: 0.5rem;}
 .holomenu-btn {
   padding: 0.2rem 0.5rem;
   max-height: min-content;
@@ -71,15 +64,14 @@ body {
     border-width: 2px;
     border-style: solid;
     border-color: var(--links);
+    color: var(--links);
+    background-color: var(--bkgd-featured);  
 }
-#holograph-menu span {
+#holograph-menu span {  /* (the input menu's "close" button) */
   padding: 0 0.5rem;
   font-size: 2rem;
   line-height: 1.5rem;
     border: 2px solid var(--links);
-}
-.holomenu-btn, #holograph-menu span {
-    border-radius: 0.5rem;
     color: var(--links);
     background-color: var(--bkgd-featured);  
 }
@@ -88,22 +80,36 @@ body {
 }
 
 
+/* ~~~ Optional styling for the input menu ~~~ */
+
+#holograph-icon svg {
+  border-radius: 3px;
+  background-color: var(--bkgd-featured);
+}
+#holograph-buttons {
+    margin-bottom: 0.5rem;
+}
+.holomenu-btn, #holograph-menu span {
+    border-radius: 0.5rem;
+}
+
+
 /* ~~~ For the rest of the page ~~~ */
 
 body {
-  width: 90vw;
-  margin: 0 auto;
-  font-family: "Verdana", sans-serif;
-  background-color: var(--bkgd);
-  color: var(--fonts);
-  @media screen and (hover) {
-    width: clamp(20rem, 50vw, 40rem);
-}
+    width: 90vw;
+    margin: 0 auto;
+    font-family: "Verdana", sans-serif;
+    background-color: var(--bkgd);
+    color: var(--fonts);
+    @media screen and (hover) {
+        width: clamp(20rem, 50vw, 40rem);
+    }
 }
 .center-text {
   text-align: center;
 }
-a {
+a, legend ~ p span {
   color: var(--links);
 }
 main {
@@ -146,7 +152,6 @@ main {
         line-height: 0.8em;
     }
 }
-
 h1, h2 {
   max-width: 70vw;
   margin-left: auto;
@@ -165,9 +170,7 @@ fieldset {
     padding: 0.5rem 1rem;
   }
 }
-section, .gap-below {
-    margin-bottom: 1rem;
-}
+section, .gap-below {margin-bottom: 1rem;}
 .inputText, .labelText {display: block;}
 .inputText {
   width: calc(100% - 1rem);
@@ -192,9 +195,7 @@ input, textarea {
     width: 45%;
   }
 }
-
 .multi-select > label {display: block;}
-
 .buttonsWrapper button {
   padding: 0.5rem;
   font-size: 1rem;
@@ -202,10 +203,6 @@ input, textarea {
   border: 2px solid var(--fonts);
   background-color: var(--bkgd-featured);  
 }
-.buttonsWrapper button#clearForm:active {
-  background-color: var(--bkgd);
-}
-.buttonsWrapper button:disabled {
-  color: var(--greyed-out);
-}
+.buttonsWrapper button#clearForm:active {background-color: var(--bkgd);}
+.buttonsWrapper button:disabled {color: var(--greyed-out);}
 footer {margin: 5rem auto;}

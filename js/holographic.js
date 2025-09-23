@@ -1,13 +1,15 @@
 /* *********************
 ***   Instructions   ***
 ************************
-(1) HTML: Add the required div (see lines 7-16) as a direct child of the body element.
+(1) HTML: Add the required divs (see lines 13-31) as direct children of the body element.
 (2) HTML: Add a class name and a custom property to each input or textarea element you want to include in the input menu. 
   (2a) Add the class name "holographic-menu".
   (2b) Add the custom property 'data-holomenu=""'.
   (2c) Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.
-(3) CSS: Add the required properties (see lines 3-29).
-(4) JS: Add the JS code (shown below) to your page.
+(3) CSS: Add the required properties (see lines 17-80).
+  (3a) Optional: If your page has multiple forms: give each form a unique name attribute, then add to CSS: ".holomenu-btn.[your form's name]-border {border-color: ___}". 
+       (see CSS line 53)
+  (4) JS: Add the JS code (shown below) to your page.
 
 Cheat sheet: 
 - To add an input field to the menu: give it the class name "holograph-menu".
