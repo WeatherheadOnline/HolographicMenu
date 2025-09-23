@@ -27,8 +27,14 @@ inputElements.forEach(displayInput);
 function displayInput(inputField) {
     btnID = inputField.getAttribute("name") + "-holo";
     colorClass = inputField.getAttribute("type") + "-color";
+    const thisForm = inputField.closest("form");
+    let borderClass;
+    if(thisForm.hasAttribute("name")) {
+        borderClass = thisForm.name + "-border";
+    } else {borderClass = "default" + "-border";}
+    console.log(borderClass);
     holographButtons.innerHTML += `
-        <button id=${btnID} class="holomenu-btn ${colorClass}" onclick="buttonListenerEvent(${inputField.id})">
+        <button id=${btnID} class="holomenu-btn ${colorClass} ${borderClass}" onclick="buttonListenerEvent(${inputField.id})">
             ${inputField.getAttribute("data-holomenu")} 
         </button>
    `;

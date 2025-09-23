@@ -3,6 +3,7 @@
   --bkgd-featured: #091b3e;
   --fonts: #beecfb;
   --links: #54cdf3;
+  --form1-btns: #2cfb2c;
   --bkgd-sheer: #091b3eCC;
   --bkgd-form: #091b3e88;
   --greyed-out: #606060;
@@ -38,14 +39,19 @@ body {
   display: none;
   flex-wrap: wrap;
   justify-content: right;
+  row-gap: 0.1rem;
 }
 
-/* Color-coded backgrounds for input menu buttons */
-/* Needs greater specificity than the default color listed further down under .holomenu-btn */
+/* Color-coded button backgrounds for different input types */
 .holomenu-btn.checkbox-color {background-color: var(--checkbox-btn);}
 .holomenu-btn.radio-color {background-color: var(--radio-btn);}
-.holomenu-btn.text-color {}
-.holomenu-btn.email-color {}
+.holomenu-btn.text-color {/* default */} 
+.holomenu-btn.email-color {/* default */}
+
+/* Color-coded borders for input menu buttons from different forms */
+.holomenu-btn.form1-border {border-color: var(--form1-btns);}
+.holomenu-btn.default-border {/* default */}
+
 
 /* ~~~ Optional styling for the input menu ~~~ */
 
@@ -62,14 +68,17 @@ body {
   padding: 0.2rem 0.5rem;
   max-height: min-content;
   font-size: 1rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--links);
 }
 #holograph-menu span {
   padding: 0 0.5rem;
   font-size: 2rem;
   line-height: 1.5rem;
+    border: 2px solid var(--links);
 }
 .holomenu-btn, #holograph-menu span {
-    border: 2px solid var(--links);
     border-radius: 0.5rem;
     color: var(--links);
     background-color: var(--bkgd-featured);  
@@ -156,7 +165,7 @@ fieldset {
     padding: 0.5rem 1rem;
   }
 }
-.gap-below {
+section, .gap-below {
     margin-bottom: 1rem;
 }
 .inputText, .labelText {display: block;}
@@ -186,17 +195,17 @@ input, textarea {
 
 .multi-select > label {display: block;}
 
-#buttonsWrapper button {
+.buttonsWrapper button {
   padding: 0.5rem;
   font-size: 1rem;
   color: var(--fonts);
   border: 2px solid var(--fonts);
   background-color: var(--bkgd-featured);  
 }
-#buttonsWrapper button#clearForm:active {
+.buttonsWrapper button#clearForm:active {
   background-color: var(--bkgd);
 }
-#buttonsWrapper button:disabled {
+.buttonsWrapper button:disabled {
   color: var(--greyed-out);
 }
 footer {margin: 5rem auto;}

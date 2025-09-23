@@ -35,96 +35,126 @@
         </div>
 
         <main>
+                
+            <header id="intro">
+                <h1 class="center-text">Mobile-friendly "input menu"</h1>
+                <h2 class="center-text">Improve your users' mobile experience for form inputs</h2>    
+            </header>
+                
+            <section>
+                <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just.. reach... a bit higher... with your thumb...</p>
+                <p>This handy input-menu tool brings each of your page's form inputs within easy reach of your users' thumb. </p>
+                <p>Just add the included class and property to each of your form inputs (see JS tab for instructions). The input menu automatically populates with a button for each form input. When the button is tapped, focus is placed on the matching form input.</p>
+                <a href="http://www.WeatherheadOnline.com" target="_blank" class="center-text">
+                    <p>On your phone? See my portfolio for a live demo</p>
+                </a>
+                <p>(Continued below...)</p>
+            </section>
             
-        <header id="intro">
-            <h1 class="center-text">Mobile-friendly "input menu"</h1>
-            <h2 class="center-text">Improve your users' mobile experience for form inputs</h2>    
-        </header>
+            <section>
+                <form name="form1">
+                    <fieldset>
+                        <legend class="gap-below">The first of two forms on this page</legend>
+                        
+                        <label for="userName" class="labelText gap-below">Here's a required field<span class="asterisk">*</span>
+                            <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Required field" required >
+                        </label>
+
+                        <label for="returnAddress" class="labelText gap-below">An email address
+                            <span class="asterisk">*</span>
+                            <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
+                        </label>
+                        
+                        <label for="messageSubject" class="labelText gap-below">This field is optional
+                            <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Optional field" >
+                        </label>
+
+
+                        <div class="side-by-side gap-below">
+                            <div id="checkboxes" class="multi-select">
+                                <label for="chk1">
+                                    <input type="checkbox" id="chk1" name="chk1" value="red" class="holograph-menu" data-holomenu="Red" /> 
+                                    Select <span style="color:#FF5555">"red"</span>
+                                </label>
+                                <label for="chk1">
+                                    <input type="checkbox" id="chk2" name="chk2" value="green" class="holograph-menu" data-holomenu="Green" /> 
+                                    Select <span style="color:#55FF55">"green"</span>
+                                </label>
+                                <label for="chk1">
+                                    <input type="checkbox" id="chk3" name="chk3" value="blue" class="holograph-menu" data-holomenu="Blue" /> 
+                                    Select <span style="color:#5577FF">"blue"</span>
+                                </label>
+                            </div>
+                            <div id="radio-buttons" class="multi-select">
+                                <label for="opt1">
+                                    <input type="radio" id="opt1" value="opt1" name="radios" class="holograph-menu" data-holomenu="Opt 1" />
+                                    Option 1
+                                </label>            
+                                <label for="opt2">
+                                    <input type="radio" id="opt2" value="opt2" name="radios" class="holograph-menu" data-holomenu="Opt 2" />
+                                    Option 2
+                                </label>            
+                                <label for="opt3">
+                                    <input type="radio" id="opt3" value="opt3" name="radios" class="holograph-menu" data-holomenu="Opt 3" />
+                                    Option 3
+                                </label>            
+                            </div>
+                        
+                        </div>
+                    
+                        <label for="body" class="labelText gap-below">Textarea elements hold more text
+                            <span class="asterisk">*</span>
+                            <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="A text area" rows="4" cols="60" required ></textarea>
+                        </label>
+                        
+                        <div class="buttonsWrapper side-by-side">
+                            <button type="reset" id="clearForm">Clear the form</button>
+                            <button id="submitEmail" disabled >Send message</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
             
-        <div>
-            <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just.. reach... a bit higher... with your thumb...</p>
-            <p>This handy input-menu tool brings each of your page's form inputs within easy reach of your users' thumb. </p>
-            <p>Just add the included class and property to each of your form inputs (see JS tab for instructions). The input menu will be automatically populated with a button for each form input. When the button is tapped, focus is placed on the matching form input.</p>
-            <a href="http://www.WeatherheadOnline.com" target="_blank" class="center-text">
-                <p>On your phone? See my portfolio for a live demo</p>
-            </a>
+            <section>
+                <p>Buttons are color-coded to direct the user to checkboxes, radio buttons, or text fields. Buttons' borders are color-coded to show which form they belong to (for forms with a unique name attribute).</p>
+                <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
+            </section>
 
-        </div>
-        
-        <div id="input-form">
-            <form>
-            <fieldset>
-                
-                <label for="userName" class="labelText gap-below">Here's a required field<span class="asterisk">*</span>
-                <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Required field" required >
-                </label>
+            <section>
+                <form>
+                    <fieldset>
+                        <legend>Here's a second form.</legend>
+                        <p>Its matching input-menu buttons have a different colored border.</p>
+                        <div class="side-by-side">
+                            <label for="userName2" class="labelText">A required field<span class="asterisk">*</span>
+                                <input type="text" id="userName2" class="inputText holograph-menu" name="userName2" data-holomenu="Required field 2" required >
+                            </label>
+                            <label for="messageSubject2" class="labelText gap-below">Optional text
+                                <input type="text" id="messageSubject2" class="inputText holograph-menu" name="subject2" data-holomenu="Optional field 2" >
+                            </label>
+                        </div>
+                        <div>
+                            <label for="returnAddress2" class="labelText gap-below">Another email address
+                                <input type="email" id="returnAddress2" class="inputText holograph-menu" name="userEmail2" data-holomenu="Email 2" required >
+                            </label>
+                        </div>
+                        <div class="buttonsWrapper side-by-side">
+                            <button type="reset" id="clearForm">Clear the form</button>
+                            <button id="submitEmail" disabled >Send message</button>
+                        </div>
 
-                <label for="returnAddress" class="labelText gap-below">An email address
-                <span class="asterisk">*</span>
-                <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
-                </label>
-                
-                <label for="subject" class="labelText gap-below">This field is optional
-                <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Optional field" >
-                </label>
-
-
-                <div class="side-by-side gap-below">
-                <div id="checkboxes" class="multi-select">
-                    <label for="chk1">
-                    <input type="checkbox" id="chk1" name="chk1" value="red" class="holograph-menu" data-holomenu="Red" /> 
-                        Select <span style="color:#FF5555">"red"</span>
-                    </label>
-                    <label for="chk1">
-                    <input type="checkbox" id="chk2" name="chk2" value="green" class="holograph-menu" data-holomenu="Green" /> 
-                        Select <span style="color:#55FF55">"green"</span>
-                    </label>
-                    <label for="chk1">
-                    <input type="checkbox" id="chk3" name="chk3" value="blue" class="holograph-menu" data-holomenu="Blue" /> 
-                        Select <span style="color:#5577FF">"blue"</span>
-                    </label>
-                </div>
-                <div id="radio-buttons" class="multi-select">
-                    <label for="opt1">
-                    <input type="radio" id="opt1" value="opt1" name="radios" class="holograph-menu" data-holomenu="Opt 1" />
-                    Option 1
-                    </label>            
-                    <label for="opt2">
-                    <input type="radio" id="opt2" value="opt2" name="radios" class="holograph-menu" data-holomenu="Opt 2" />
-                    Option 2
-                    </label>            
-                    <label for="opt3">
-                    <input type="radio" id="opt3" value="opt3" name="radios" class="holograph-menu" data-holomenu="Opt 3" />
-                    Option 3
-                    </label>            
-                </div>
-                
-                </div>
-
-
+                    </fieldset>
+                </form>
+            </section>
             
-                <label for="body" class="labelText gap-below">Textarea elements hold more text
-                <span class="asterisk">*</span>
-                <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="A text area" rows="4" cols="60" required ></textarea>
-                </label>
-                
-                <div id="buttonsWrapper" class="side-by-side">
-                <button type="reset" id="clearForm">Clear the form</button>
-                <button id="submitEmail" disabled >Send message</button>
-                </div>
-
-            </fieldset>
-            </form>
-        </div>
-        <div id="postscript">
-            <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
-            <p>If you have any questions, or any suggestions for improvement, please let me know! My email address is listed in the <a href="http://www.weatherheadonline.com/#Contact" target="_blank">contact section</a> of my portfolio site.</p>
-        </div>
+            <section>
+                <p>If you have any questions, or any suggestions for improvement, please let me know! My email address is listed in the <a href="http://www.weatherheadonline.com/#Contact" target="_blank">contact section</a> of my portfolio site.</p>
+            </section>
         </main> 
         <footer class="center-text">
-        <a href="http://www.WeatherheadOnline.com" target="_blank">
-            <p>Made by &copy; www.WeatherheadOnline.com</p>
-        </a> 
+            <a href="http://www.WeatherheadOnline.com" target="_blank">
+                <p>Made by &copy; www.WeatherheadOnline.com</p>
+            </a> 
         </footer>
         <script src="js/holographic.js"></script>
     </body>
