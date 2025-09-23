@@ -6,8 +6,8 @@
   (2a) Add the class name "holographic-menu".
   (2b) Add the custom property 'data-holomenu=""'.
   (2c) Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.
-(3) CSS: Add the required properties (see lines 17-80).
-  (3a) Optional: If your page has multiple forms: give each form a unique name attribute, then add to CSS: ".holomenu-btn.[your form's name]-border {border-color: ___}". 
+(3) CSS: Add the required properties (see lines 17-104).
+  (3a) Optional: If your form has multiple fieldsets: give each fieldset a unique name attribute, then add to CSS: ".holomenu-btn.[your fieldset's name]-border {border-color: ___}". 
        (see CSS line 53)
   (4) JS: Add the JS code (shown below) to your page.
 
@@ -29,20 +29,26 @@ inputElements.forEach(displayInput);
 function displayInput(inputField) {
     btnID = inputField.getAttribute("name") + "-holo";
     colorClass = inputField.getAttribute("type") + "-color";
-    const thisForm = inputField.closest("form");
-    let borderClass;
-    if(thisForm.hasAttribute("name")) {
-        borderClass = thisForm.name + "-border";
-    } else {borderClass = "default" + "-border";}
-    console.log(borderClass);
+    const borderClass = getBorderColor(inputField);
     holographButtons.innerHTML += `
-        <button id=${btnID} class="holomenu-btn ${colorClass} ${borderClass}" onclick="buttonListenerEvent(${inputField.id})">
+        <button id=${btnID} class="holomenu-btn ${colorClass} ${borderClass}" onclick="holoEventListener(${inputField.id})">
             ${inputField.getAttribute("data-holomenu")} 
         </button>
    `;
 }
 
-function buttonListenerEvent(inputFieldTarget) {
+function getBorderColor(inputField) {
+    const thisFieldset = inputField.closest("fieldset");
+    let borderClass;
+    if(thisFieldset.hasAttribute("name")) {
+        borderClass = thisFieldset.name + "-border";
+    } else {
+        borderClass = "default" + "-border";
+    }
+    return borderClass;
+}
+
+function holoEventListener(inputFieldTarget) {
     if (inputFieldTarget.type === "checkbox") {
         inputFieldTarget.checked = !inputFieldTarget.checked;
     } else if (inputFieldTarget.type === "radio") {

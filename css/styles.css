@@ -3,7 +3,7 @@
   --bkgd-featured: #091b3e;
   --fonts: #beecfb;
   --links: #54cdf3;
-  --form1-btns: #2cfb2c;
+  --fieldset-1-btns: #ffffff;
   --bkgd-sheer: #091b3eCC;
   --bkgd-form: #091b3e88;
   --greyed-out: #606060;
@@ -50,12 +50,12 @@ body {
 .holomenu-btn.text-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */} 
 .holomenu-btn.email-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */}
 
-/* Color-coded borders for input menu buttons from different forms */
-/* Add form-specific rules here, using this selector: 
-    .holomenu-btn.[your form's name attribute]-border */
-.holomenu-btn.form1-border {border-color: var(--form1-btns);}
-.holomenu-btn.form_2-boder {/* if nothing is specified, buttons default to the generic rule for .holomenu-btn */}
-.holomenu-btn.default-border {/* for forms without a name attribute, buttons are given this class name */}
+/* Color-coded borders for input menu buttons from different fieldsets */
+/* Add fieldset-specific rules here, using this selector: 
+    .holomenu-btn.[your fieldset's name attribute]-border */
+.holomenu-btn.fieldset-1-border {border-color: var(--fieldset-1-btns);}
+.holomenu-btn.fieldset-2-boder {/* if nothing is specified, buttons default to the generic rule for .holomenu-btn */}
+.holomenu-btn.default-border {/* for fieldsets without a name attribute, buttons are given this class name */}
 
 .holomenu-btn {
   padding: 0.2rem 0.5rem;
@@ -160,6 +160,9 @@ h1, h2 {
 form {
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 fieldset {
   position: relative;
@@ -203,4 +206,4 @@ input, textarea {
 }
 .buttonsWrapper button#clearForm:active {background-color: var(--bkgd);}
 .buttonsWrapper button:disabled {color: var(--greyed-out);}
-footer {margin: 5rem auto;}
+footer {margin: 3rem auto;}

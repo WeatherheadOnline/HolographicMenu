@@ -47,17 +47,17 @@
             <section>
                 <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just.. reach... a bit higher... with your thumb...</p>
                 <p>This handy input-menu tool brings each of your page's form inputs within easy reach of your users' thumb. </p>
-                <p>Just add the included class and property to each of your form inputs (see JS tab for instructions). The input menu automatically populates with a button for each form input. When the button is tapped, focus is placed on the matching form input.</p>
+                <p>Just add the included class and property to each of your form inputs (see JS tab for instructions). The input menu automatically populates with a button for each form input.</p>
+                <p>Input menu buttons are color-coded to direct the user to checkboxes, radio buttons, or text fields. When the button is tapped: focus is placed on the matching form input; checkboxes are toggled; and radio buttons are checked.</p>
                 <a href="http://www.WeatherheadOnline.com" target="_blank" class="center-text">
-                    <p>On your phone? See my portfolio for a live demo</p>
+                    <p>On your phone? See my portfolio for a simple demo</p>
                 </a>
-                <p>(Continued below...)</p>
             </section>
-            
+                        
             <section>
-                <form name="form1">
-                    <fieldset>
-                        <legend class="gap-below">The first of two forms on this page</legend>
+                <form>
+                    <fieldset name="fieldset-1">
+                        <legend class="gap-below">The first of two sections in this form</legend>
                         
                         <label for="userName" class="labelText gap-below">Here's a required field<span class="asterisk">*</span>
                             <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Required field" required >
@@ -114,23 +114,13 @@
                             <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="A text area" rows="4" cols="60" required ></textarea>
                         </label>
                         
-                        <div class="buttonsWrapper side-by-side">
-                            <button type="reset" id="clearForm">Clear the form</button>
-                            <button id="submitEmail" disabled >Send message</button>
-                        </div>
                     </fieldset>
-                </form>
-            </section>
-            
-            <section>
-                <p>Buttons are color-coded to direct the user to checkboxes, radio buttons, or text fields. Buttons' borders are color-coded to show which form they belong to (for forms with a unique name attribute).</p>
-                <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
-            </section>
 
-            <section>
-                <form>
+                <p>The word "holographic" appears in some of the ids and class names. The input menu was originally called the holographic menu, in reference to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a subsection is representative of the whole.</p>
+
+
                     <fieldset>
-                        <legend>Here's a second form.</legend>
+                        <legend>Part two of the form</legend>
                         <p>Its matching input-menu buttons have a <span>different colored border</span>.</p>
                         <div class="side-by-side">
                             <label for="userName2" class="labelText">A required field<span class="asterisk">*</span>
@@ -145,17 +135,18 @@
                                 <input type="email" id="returnAddress2" class="inputText holograph-menu" name="userEmail2" data-holomenu="Email 2" required >
                             </label>
                         </div>
+
                         <div class="buttonsWrapper side-by-side">
                             <button type="reset" id="clearForm">Clear the form</button>
                             <button id="submitEmail" disabled >Send message</button>
                         </div>
-
                     </fieldset>
+
                 </form>
             </section>
             
             <section>
-                <p>The word "holographic" appears in some of the ids and class names. The input menu was originally called the holographic menu, in reference to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a subsection is representative of the whole.</p>
+                <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
                 <p>If you have any questions, or any suggestions for improvement, please let me know. My email address is listed in the <a href="http://www.weatherheadonline.com/#Contact" target="_blank">contact section</a> of my portfolio site.</p>
             </section>
         </main> 
