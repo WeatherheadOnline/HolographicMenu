@@ -34,7 +34,13 @@ function displayInput(inputField) {
 }
 
 function buttonListenerEvent(inputFieldTarget) {
-    inputFieldTarget.focus();
+    if (inputFieldTarget.type === "checkbox") {
+        inputFieldTarget.checked = !inputFieldTarget.checked;
+    } else if (inputFieldTarget.type === "radio") {
+        inputFieldTarget.checked = true;
+    } else {
+        inputFieldTarget.focus();
+    }
 }
 
 

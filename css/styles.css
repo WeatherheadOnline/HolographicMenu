@@ -76,7 +76,7 @@ body {
   background-color: var(--bkgd);
   color: var(--fonts);
   @media screen and (hover) {
-    width: clamp(20rem, 50vw, 50rem);
+    width: clamp(20rem, 50vw, 40rem);
 }
 }
 .center-text {
@@ -158,7 +158,7 @@ input, textarea {
 }
 .side-by-side > * {
   width: 100%;
-  @media screen and (hover) {
+  @media screen and (hover) and (min-width: 700px) {
     width: 45%;
   }
 }
