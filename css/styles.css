@@ -108,24 +108,33 @@ main {
   background-color: var(--bkgd-sheer)
 }
 #home-link p {margin: 0;}
+.bigger {font-size: 2em;}
 #pointer {
   z-index: 4;
   position: fixed;
   bottom: 4rem;
   right: 1rem;
-  padding: 0.5rem;
-  padding-bottom: 0;
   transform: rotate(-10deg);
-  background-color: var(--bkgd-sheer);
-  p {
-    margin: 0;
-  }
-  p.bigger {
-    text-align: right;
-    margin-right: 1rem;
-  }
+  display: flex;
+  gap: 0;
+    background-color: var(--bkgd-sheer);
+    p {
+        margin: 0;
+    }
 }
-.bigger {font-size: 2em;}
+#pointer-text {
+    height: min-content;
+    padding: 0.5rem;
+}
+#pointer-symbols {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+        line-height: 0.8em;
+    }
+}
+
 h1, h2 {
   max-width: 70vw;
   margin-left: auto;
