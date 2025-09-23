@@ -1,3 +1,15 @@
+:root {
+  --bkgd: #020421;
+  --bkgd-featured: #091b3e;
+  --fonts: #beecfb;
+  --links: #54cdf3;
+  --bkgd-sheer: #091b3eAA;
+  --bkgd-form: #091b3e88;
+  --greyed-out: #606060;
+  --checkbox-btn: #3e092a;
+  --radio-btn: #29093e;
+}
+
 /* ~~~ Required styling ~~~ */
 
 body {
@@ -28,6 +40,12 @@ body {
   justify-content: right;
 }
 
+/* Color-coded backgrounds for input menu buttons */
+/* Needs greater specificity than the default color listed further down under .holomenu-btn */
+.holomenu-btn.checkbox-color {background-color: var(--checkbox-btn);}
+.holomenu-btn.radio-color {background-color: var(--radio-btn);}
+.holomenu-btn.text-color {}
+.holomenu-btn.email-color {}
 
 /* ~~~ Optional styling for the input menu ~~~ */
 
@@ -51,24 +69,15 @@ body {
   line-height: 1.5rem;
 }
 .holomenu-btn, #holograph-menu span {
-  color: var(--links);
-  border: 2px solid var(--links);
-  background-color: var(--bkgd-featured);  
-  border-radius: 0.5rem;
+    border: 2px solid var(--links);
+    border-radius: 0.5rem;
+    color: var(--links);
+    background-color: var(--bkgd-featured);  
 }
 
 
 /* ~~~ For the rest of the page ~~~ */
 
-:root {
-  --bkgd: #020421;
-  --bkgd-featured: #091b3e;
-  --fonts: #beecfb;
-  --links: #54cdf3;
-  --bkgd-sheer: #091b3eAA;
-  --bkgd-form: #091b3e88;
-  --greyed-out: #606060;
-}
 body {
   width: 90vw;
   margin: 0 auto;
