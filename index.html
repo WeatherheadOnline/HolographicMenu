@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Easy form inputs for mobile devices</title>
-        <meta ref="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
 
     <body>
@@ -50,20 +50,55 @@
             <form>
             <fieldset>
                 
-                <label for="userName" class="labelText">Here's a required field<span class="asterisk">*</span>
+                <label for="userName" class="labelText gap-below">Here's a required field<span class="asterisk">*</span>
                 <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Required field" required >
                 </label>
 
-                <label for="returnAddress" class="labelText">An email address
+                <label for="returnAddress" class="labelText gap-below">An email address
                 <span class="asterisk">*</span>
                 <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
                 </label>
                 
-                <label for="subject" class="labelText">This field is optional
+                <label for="subject" class="labelText gap-below">This field is optional
                 <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Optional field" >
                 </label>
+
+
+                <div class="side-by-side gap-below">
+                <div id="checkboxes" class="multi-select">
+                    <label for="chk1">
+                    <input type="checkbox" id="chk1" name="chk1" value="red" class="holograph-menu" data-holomenu="Red" /> 
+                        Select <span style="color:#FF5555">"red"</span>
+                    </label>
+                    <label for="chk1">
+                    <input type="checkbox" id="chk2" name="chk2" value="green" class="holograph-menu" data-holomenu="Green" /> 
+                        Select <span style="color:#55FF55">"green"</span>
+                    </label>
+                    <label for="chk1">
+                    <input type="checkbox" id="chk3" name="chk3" value="blue" class="holograph-menu" data-holomenu="Blue" /> 
+                        Select <span style="color:#5555FF">"blue"</span>
+                    </label>
+                </div>
+                <div id="radio-buttons" class="multi-select">
+                    <label for="opt1">
+                    <input type="radio" id="opt1" value="opt1" name="radios" class="holograph-menu" data-holomenu="Opt 1" />
+                    Option 1
+                    </label>            
+                    <label for="opt2">
+                    <input type="radio" id="opt2" value="opt2" name="radios" class="holograph-menu" data-holomenu="Opt 2" />
+                    Option 2
+                    </label>            
+                    <label for="opt3">
+                    <input type="radio" id="opt3" value="opt3" name="radios" class="holograph-menu" data-holomenu="Opt 3" />
+                    Option 3
+                    </label>            
+                </div>
+                
+                </div>
+
+
             
-                <label for="body" class="labelText">Textarea elements hold more text
+                <label for="body" class="labelText gap-below">Textarea elements hold more text
                 <span class="asterisk">*</span>
                 <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="A text area" rows="4" cols="60" required ></textarea>
                 </label>
