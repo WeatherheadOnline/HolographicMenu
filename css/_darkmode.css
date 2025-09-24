@@ -1,0 +1,170 @@
+:root {
+    --logo-color-accent:#004c8a;
+    --logo-color-main:#00a2f0;
+
+    --blue-lightest: #beecfb;
+    --blue-light: #96e3ed;
+    --blue-mid: #54cdf3;
+    --blue-bright: #00a2f0;
+    --SFX-bkgd: #020421AA;
+    --navy-lightest: #091b3e;
+    --navy-dark: #020421;
+    --navy-darkest: #000214;
+    --hero-text-shadow: #000000;
+
+    --green-light: #67d467;
+    --green-bright: #32b032;
+    --purple-deep: #1c01a4;
+
+    --menu-edges: #0d3854dd;
+    --menu-center: #0d3854ff;
+}
+
+body {
+    background-color: var(--navy-dark);
+    color: var(--blue-lightest);
+}
+h2, h3 {color: var(--blue-bright);}
+
+/* ************************* */
+/*       Backgrounds         */
+/* ************************* */
+
+.bkgd-gradient-radial {
+    background: radial-gradient(
+        closest-side at 50% 40%,
+        var(--navy-lightest) 7%,
+        var(--navy-dark) 83%,
+        var(--navy-darkest) 100%
+    );
+}
+.bkgd-gradient-linear {
+    background: linear-gradient(
+        var(--navy-lightest) 7%,
+        var(--navy-dark) 60%,
+        var(--navy-darkest) 100%        
+    );
+}
+.lightshaft {background-image: url(../img/lightshaft_darkmode.svg);}
+.landing-waves {opacity: 0.2;}
+.rippleClick svg {stroke: #61f399;}
+.rippleInt svg {stroke: #2867d4;}
+
+/* ************************* */
+/*       Header & Menu       */
+/* ************************* */
+
+.logo-accent-color {fill: var(--logo-color-accent);}
+.logo-main-color {fill: var(--logo-color-main);}
+#logo:hover {outline: 2px solid var(--logo-color-accent);}
+#hamburger svg {stroke:var(--blue-bright);}
+#menu {
+    background: linear-gradient(
+        to right,
+        var(--menu-edges),
+        var(--menu-center) 24%,
+        var(--menu-center) 76%,
+        var(--menu-edges)
+    );
+    box-shadow: 0 0 10px var(--navy-darkest);
+}    
+#menu h4 {
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: var(--blue-light);
+    text-shadow: 2px 2px 0 var(--navy-lightest);
+}
+#menu h4:hover, #menu span:hover {background-color: var(--navy-lightest);}
+#holograph-icon svg {
+    stroke: var(--blue-bright);   
+    border: 3px solid var(--blue-bright);
+    background-color: var(--navy-darkest);
+}
+#holograph-menu span {
+    color: var(--blue-bright);
+    border: 2px solid var(--blue-bright);
+    background-color: var(--navy-darkest);
+}
+
+
+
+/* ******************************* */
+/*        Landing page             */
+/* ******************************* */
+
+/* "SPLASH" moving background effect */
+
+#hero-text p:nth-child(2) {      /* "Splash"  */
+    background: url(../img/waves_text_front_darker.svg), url(../img/waves_text_back_lighter.svg), linear-gradient(var(--blue-light), white 55%);
+    background-repeat: repeat-x, repeat-x;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position-y: 110%, 80%;
+    background-position-x: center, center;
+    background-size: 10%, 10%;
+}
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text p:nth-child(2) {background-size: 6%, 6%;}   /* "Splash"  */
+}
+@media screen and (hover) and (min-width: 1200px) {
+    #hero-text p:nth-child(2) {background-position-y: 140%, 100%;}   /* "Splash"  */
+}
+#hero-text-primary > p:first-child {text-shadow: 2px 2px 0 var(--hero-text-shadow);}   /* "Make a"  */
+#hero-text p:nth-child(2) {filter: drop-shadow(2px 2px 0 var(--hero-text-shadow));}  /* "Splash"  */
+#hero-text-secondary {text-shadow: 2px 2px 0 var(--hero-text-shadow);}
+#hero-text-secondary svg {filter: drop-shadow(2px 2px 0 var(--hero-text-shadow));}
+
+/* ******************************* */
+/*        Special Effects          */
+/* ******************************* */
+
+#SFX_interactive {
+    color: var(--blue-light);
+    outline: 3px solid var(--green-bright);
+    background-color: var(--navy-lightest)
+}
+.SFX_thumbnail svg, .arrow svg {stroke: var(--blue-lightest);}
+#Effects hgroup, #SFX_panel {background-color: var(--navy-translucent);}
+.SFX_thumbnail svg {border: 1px solid var(--green-light);}
+.active svg {outline: 3px solid var(--green-light);}
+.arrow svg {border: 1px solid var(--green-light);}
+.arrow svg:active {border: 4px solid var(--green-light);}
+
+/* ************************* */
+/*     "About" section     */
+/* ************************* */
+
+.about-quote {background-color: var(--navy-lightest);}
+
+/* ************************* */
+/*     "Contact" section     */
+/* ************************* */
+
+input, textarea {
+    color: var(--blue-lightest);
+    background-color: var(--navy-darkest);
+    opacity: 0.7;
+    border: 1px solid var(--green-light);
+} 
+#messageSent {
+    background-color: var(--navy-darkest);
+    border: 4px solid var(--navy-lightest);
+}
+#messageSent p {
+    color: var(--blue-bright);
+    font-size: 1.5rem;
+    text-align: center;
+}
+button {
+    background-color: var(--navy-lightest);
+    color: var(--blue-lightest);
+    border: 1px solid var(--green-light);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* ************************* */
+/*      Footer               */
+/* ************************* */
+
+footer {background-color: var(--navy-darkest);}
