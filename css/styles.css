@@ -1,21 +1,13 @@
-:root {
-  --bkgd: #020421;
-  --bkgd-featured: #091b3e;
-  --fonts: #beecfb;
-  --links: #54cdf3;
-  --fieldset-1-btns: #ffffff;
-  --bkgd-sheer: #091b3eCC;
-  --bkgd-form: #091b3e88;
-  --greyed-out: #606060;
-  --checkbox-btn: #3e092a;
-  --radio-btn: #29093e;
-}
-
-
 /* ~~~ Required styling. Substitute your preferred colors and length values. ~~~ */
 
 body {
   position: relative;
+  --bkgd-featured: #091b3e;
+  --fonts: #beecfb;
+  --links: #54cdf3;
+  --bkgd-sheer: #091b3eCC;
+  --checkbox-btn: #3e092a;
+  --radio-btn: #29093e;
 }
 #holograph-menu {
   position: fixed;
@@ -51,11 +43,8 @@ body {
 .holomenu-btn.email-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */}
 
 /* Color-coded borders for input menu buttons from different fieldsets */
-/* Add fieldset-specific rules here, using this selector: 
-    .holomenu-btn.[your fieldset's name attribute]-border */
-.holomenu-btn.fieldset-1-border {border-color: var(--fieldset-1-btns);}
-.holomenu-btn.fieldset-2-boder {/* if nothing is specified, buttons default to the generic rule for .holomenu-btn */}
 .holomenu-btn.default-border {/* for fieldsets without a name attribute, buttons are given this class name */}
+    /* if no border color is specified, buttons default to the generic rule for .holomenu-btn */
 
 .holomenu-btn {
   padding: 0.2rem 0.5rem;
@@ -103,23 +92,24 @@ body {
 #pointer-dismiss {cursor: pointer;}
 .bigger {font-size: 2em;}
 
-/* ~~~ Optional styling for the input menu ~~~ */
 
+/* ~~~ Optional styling for the input menu ~~~ */
 #holograph-icon svg {
   border-radius: 3px;
   background-color: var(--bkgd-featured);
 }
-#holograph-buttons {
-  margin-bottom: 0.5rem;
-}
-.holomenu-btn, #holograph-menu span {
-  border-radius: 0.5rem;
-}
+#holograph-buttons {margin-bottom: 0.5rem;}
+.holomenu-btn.fieldset-1-border {border-color: var(--fieldset-1-btns);}
+.holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}
 
 
 /* ~~~ For the rest of the page ~~~ */
 
 body {
+  --bkgd: #020421;
+  --fieldset-1-btns: #ffffff;
+  --bkgd-form: #091b3e88;
+  --greyed-out: #606060;
   width: 90vw;
   margin: 0 auto;
   font-family: "Verdana", sans-serif;
@@ -149,7 +139,6 @@ main {
   background-color: var(--bkgd-sheer)
 }
 #home-link p {margin: 0;}
-
 h1, h2 {
   max-width: 70vw;
   margin-left: auto;

@@ -1,15 +1,16 @@
 /* *********************
 ***   Instructions   ***
 ************************
-(1) HTML: Add the required divs (see lines 13-31) as direct children of the body element.
-(2) HTML: Add a class name and a custom property to each input or textarea element you want to include in the input menu. 
-  (2a) Add the class name "holographic-menu".
-  (2b) Add the custom property 'data-holomenu=""'.
+(1) HTML: Add the required divs (see lines 3-21) as direct children of the body element.
+(2) HTML: Add a class name and a custom property to each input and textarea element you want to include in the input menu. 
+  (2a) Add the class name class="holograph-menu".
+  (2b) Add the custom property data-holomenu="".
   (2c) Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.
-(3) CSS: Add the required properties (see lines 17-104).
-  (3a) Optional: If your form has multiple fieldsets: give each fieldset a unique name attribute, then add to CSS: ".holomenu-btn.[your fieldset's name]-border {border-color: ___}". 
-       (see CSS line 53)
-  (4) JS: Add the JS code (shown below) to your page.
+(3) CSS: Add the required properties (see CSS lines 3-93).
+  (3a) Substitute your preferred colors in the variable values.
+  (3b) Un-comment line 22 ("display:none") to disable the input menu on desktop.
+  (3c) Optional: If your form has multiple fieldsets: give each fieldset a unique name attribute, then add to CSS: ".holomenu-btn.[your fieldset's name]-border {border-color: ___}" (see CSS line 45). 
+(4) JS: Add the JS code (shown below) to your page. (If you add it as a separate .js file, don't forget to add a script tag for it in your HTML file.)
 
 Cheat sheet: 
 - To add an input field to the menu: give it the class name "holograph-menu".
@@ -38,12 +39,12 @@ function displayInput(inputField) {
 }
 
 function getBorderColor(inputField) {
-    const thisFieldset = inputField.closest("fieldset");
     let borderClass;
-    if(thisFieldset.hasAttribute("name")) {
+    if (inputField.closest("fieldset") != null && inputField.closest("fieldset").hasAttribute("name")) {
+        const thisFieldset = inputField.closest("fieldset");
         borderClass = thisFieldset.name + "-border";
     } else {
-        borderClass = "default" + "-border";
+        borderClass = "default-border";
     }
     return borderClass;
 }
