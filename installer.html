@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add the Input Menu tool to your webpage</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/installer.css" />
+    
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Enter the ID of each input element, and the text to show on the corresponding input-menu button.</legend>
+            <div id="id-inputs">
+                <!-- <label>Element id:<input type="text" id="id-1" /></label>
+                <label>Button text:<input type="text" id="text-1" /></label>  -->
+            </div>
+            <div onclick="addElement()"><p id="add-element-btn">Add input element</p></div>
+
+        </fieldset>
+        <fieldset>
+            <legend for="html-dump">Add your HTML here.</legend>
+            <textarea id="html-dump"></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script src="js/installerAddElement.js"></script>
+</body>
+</html>
