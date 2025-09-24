@@ -143,6 +143,7 @@ h1, h2 {
   margin-right: auto;
   font-family: "Georgia", serif;
 }
+h2 {color: var(--links);}
 p {line-height: 1.3em;}
 .asterisk {color: rgb(255, 27, 50);}
 form {
