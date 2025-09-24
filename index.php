@@ -138,6 +138,7 @@
         <section>
             <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
             <p>If you have any questions, or any suggestions for improvement, please let me know. My email address is listed in the <a href="../#Contact" target="_blank">contact section</a> of my portfolio site.</p>
+            <p class="footnote">Looking for the input-menu icon? On this page, the SVG is in-line in the HTML. Copies of the matching SVG files can be found here: this version <a href="./img/holomenu-icon_with-border.svg" target="_blank">includes the border</a>, and this version has <a href="./img/holomenu-icon_no-border.svg" target="_blank">no border</a> so you can set your own border in the CSS.</p>
         </section>
 
     </main>
