@@ -1,4 +1,6 @@
-/* ~~~ Required styling. Substitute your preferred colors and length values. ~~~ */
+/* ************************ */
+/* *** Required styling *** */
+/* ************************ */
 
 body {
   position: relative;
@@ -14,12 +16,10 @@ body {
   bottom: 1rem;  
   right: 1rem;  
   z-index: 4;
-  @media screen and (hover) {
-  
+  @media screen and (hover) {  
         /* ~~~ Important: ~~~ */
         /* ~~~ Un-comment the following line so that the menu is only active on touchscreen devices ~~~ */
-  
-        /*     display: none; */   
+    /*     display: none; */   
   }
 }    
 
@@ -95,7 +95,10 @@ body {
 .bigger {font-size: 2.5em;}
 
 
-/* ~~~ Optional styling for the input menu ~~~ */
+/* *************************************** */
+/* *** Optional styling for input menu *** */
+/* *************************************** */
+
 #holograph-icon svg {
   border-radius: 3px;
   background-color: var(--bkgd-featured);
@@ -105,13 +108,14 @@ body {
 .holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}
 
 
-/* ~~~ For the rest of the page ~~~ */
+/* ******************************** */
+/* *** For the rest of the page *** */
+/* ******************************** */
 
 * {
   margin: 0;
   padding: 0;
 }
-
 body {
   --bkgd: #020421;
   --fieldset-1-btns: #ffffff;
@@ -121,8 +125,6 @@ body {
   background-color: var(--bkgd);
   color: var(--fonts);
 }
-.center-text {text-align: center;}
-a, legend ~ p span {color: var(--links);}
 main {
   width: 90vw;
   margin: 0 auto;
@@ -138,12 +140,18 @@ main {
     margin: 0 auto;
   }
 }
-.main-contents {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+#home-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: max-content;
+  padding: 0.5rem;
+  background-color: var(--bkgd-sheer)
 }
+#home-link p {margin: 0;}
 
+
+/* ~~~ Sidebar ~~~ */
 aside {
   display: flex;
   flex-direction: column;
@@ -155,12 +163,6 @@ aside {
     padding: 3.5rem 0.5rem 1rem 0.5rem;  /* to clear the "back to top" link */
   }
 }
-
-/* @media screen and (min-width: 700px) { */
-  /* aside section {
-    margin-top: 3rem;
-  } */
-/* } */
 
 ol {
   padding: 0 0 0 1rem;
@@ -177,18 +179,15 @@ ol * {
 }
 
 
+/* ~~~ Main contents ~~~ */
 
-#home-link {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  width: max-content;
-  padding: 0.5rem;
-  background-color: var(--bkgd-sheer)
+.main-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-#home-link p {margin: 0;}
 h1 {
-  margin-top: 3.5rem;
+  margin-top: 3.5rem; /* to clear the "back to top" link */
   margin-bottom: 2rem;
 }
 h1, h2 {
@@ -202,10 +201,16 @@ p {
   line-height: 1.3em;
   margin: 1rem 0;
 }
+.center-text {text-align: center;}
+a, .text-featured {color: var(--links);}
 .footnote {
   font-style: italic;
 }
 .asterisk {color: rgb(255, 27, 50);}
+
+
+/* ~~~ Forms ~~~ */
+
 form {
   width: 100%;
   margin: 0 auto;
@@ -220,7 +225,6 @@ fieldset {
     padding: 0.5rem 1rem;
   }
 }
-/* section, .gap-below {margin-bottom: 1.5rem;} */
 .gap-below {margin-bottom: 1.5rem;}
 .inputText, .labelText {display: block;}
 .inputText {
@@ -257,6 +261,10 @@ input, textarea {
 }
 .buttonsWrapper button#clearForm:active {background-color: var(--bkgd);}
 .buttonsWrapper button:disabled {color: var(--greyed-out);}
+
+
+/* ~~~ Footer ~~~ */
+
 footer {
   margin: 5rem auto 3rem auto;
   font-size: 0.8em;

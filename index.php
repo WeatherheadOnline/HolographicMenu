@@ -184,7 +184,7 @@ Optional: If your form contains multiple fieldsets:
 
                     <fieldset>
                         <legend>Part two of the form</legend>
-                        <p>Its matching input-menu buttons have a <span>different colored border</span>.</p>
+                        <p>Its matching input-menu buttons have a <span class="text-featured">different colored border</span>.</p>
 
                         <div class="side-by-side">
                             <label for="userName2" class="labelText">A required field<span class="asterisk">*</span>
