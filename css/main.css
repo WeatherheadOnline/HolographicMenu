@@ -107,6 +107,11 @@ body {
 
 /* ~~~ For the rest of the page ~~~ */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   --bkgd: #020421;
   --fieldset-1-btns: #ffffff;
@@ -123,11 +128,12 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column-reverse;
+  gap: 2rem;
   @media screen and (min-width: 700px) {
     display: grid;
-    grid-template-columns: clamp(15rem, 25vw, 20rem) clamp(25rem, 50vw, 40rem);
+    grid-template-columns: clamp(15rem, 25vw, 20rem) clamp(24rem, 50vw, 40rem);
     grid-template-rows: 1;
-    gap: min(5vw, 6rem);
+    gap: min(6vw, 6rem);
     width: max-content;
     margin: 0 auto;
   }
@@ -135,22 +141,26 @@ main {
 .main-contents {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: var(--bkgd-featured);
   font-size: 0.9rem;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   @media screen and (min-width: 700px) {
-    padding: 3rem 0.5rem 1rem 0.5rem;
+    padding: 3.5rem 0.5rem 1rem 0.5rem;  /* to clear the "back to top" link */
   }
 }
-@media screen and (min-width: 700px) {
-  aside section {
-    margin-top: 2.5rem;
-  }
-}
+
+/* @media screen and (min-width: 700px) { */
+  /* aside section {
+    margin-top: 3rem;
+  } */
+/* } */
 
 ol {
   padding: 0 0 0 1rem;
@@ -159,7 +169,8 @@ li {
   padding: 0;
 }
 ol > ol {
-padding: 0 0 0 1rem;
+  padding: 0 0 0 1rem;
+  list-style-type: lower-alpha;
 }
 ol * {
   margin: 1.2em 0 1.2em 0;
@@ -171,11 +182,15 @@ ol * {
   position: fixed;
   top: 1rem;
   left: 1rem;
-  width: min-content;
+  width: max-content;
   padding: 0.5rem;
   background-color: var(--bkgd-sheer)
 }
 #home-link p {margin: 0;}
+h1 {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
 h1, h2 {
   max-width: 70vw;
   margin-left: auto;
@@ -183,7 +198,10 @@ h1, h2 {
   font-family: "Georgia", serif;
 }
 h2 {color: var(--links);}
-p {line-height: 1.3em;}
+p {
+  line-height: 1.3em;
+  margin: 1rem 0;
+}
 .footnote {
   font-style: italic;
 }
@@ -193,7 +211,7 @@ form {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 fieldset {
   position: relative;
@@ -202,7 +220,8 @@ fieldset {
     padding: 0.5rem 1rem;
   }
 }
-section, .gap-below {margin-bottom: 1.5rem;}
+/* section, .gap-below {margin-bottom: 1.5rem;} */
+.gap-below {margin-bottom: 1.5rem;}
 .inputText, .labelText {display: block;}
 .inputText {
   width: calc(100% - 1rem);

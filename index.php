@@ -14,12 +14,14 @@
         <aside>
             <section>
                 <h2 class="center-text">Instructions</h2>            
+            </section>
+            <section>
                 <p>Just add the included class and property to each of your form inputs. The input menu automatically populates with a button for each form input.</p>
             </section>
             <section>
 
 <ol>
-    <li>Open <a href="instructions/HTML.txt" target="_blank">HTML.txt</a>.</li>
+    <strong><li>Open <a href="instructions/HTML.txt" target="_blank">HTML.txt</a>.</li></strong>
     <ol>
         <li>Add the two included divs to your page, as direct children of the body.</li>
         <p>For each of your input elements:</p>
@@ -27,7 +29,7 @@
         <li>Add the custom property "data-holomenu".</li>
         <li>Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.</li>
     </ol>
-    <li>Open <a href="instructions/CSS.txt" target="_blank">CSS.txt</a>.</li>
+    <strong><li>Open <a href="instructions/CSS.txt" target="_blank">CSS.txt</a>.</li></strong>
     <ol>
         <li>Save it as a .CSS file in your project.</li>
         <li>Remove the optional styling at the bottom of the file if you don't want it.</li>
@@ -38,7 +40,7 @@
         <li>For each fieldset, add this rule to the CSS file: 
 .holomenu-btn.[your fieldset's name]-border {border-color: ___}</li>
     </ol>
-    <li>Open <a href="instructions/JS.txt" target="_blank">JS.txt</a>.</li>
+    <strong><li>Open <a href="instructions/JS.txt" target="_blank">JS.txt</a>.</li></strong>
     <ol>
         <li>Save this file as a .JS file to your project.</li>
         <li>Add a script tag in the body of your HTML file, listing the JS file as the value for the src attribute.</li>
