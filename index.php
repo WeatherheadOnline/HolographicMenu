@@ -19,33 +19,32 @@
                 <p>Just add the included class and property to each of your form inputs. The input menu automatically populates with a button for each form input.</p>
             </section>
             <section>
-
-<ol>
-    <strong><li>Open <a href="instructions/HTML.txt" target="_blank">HTML.txt</a>.</li></strong>
-    <ol>
-        <li>Add the two included divs to your page, as direct children of the body.</li>
-        <p>For each of your input elements:</p>
-        <li>Add the class name "holograph-menu".</li>
-        <li>Add the custom property "data-holomenu".</li>
-        <li>Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.</li>
-    </ol>
-    <strong><li>Open <a href="instructions/CSS.txt" target="_blank">CSS.txt</a>.</li></strong>
-    <ol>
-        <li>Save it as a .CSS file in your project.</li>
-        <li>Remove the optional styling at the bottom of the file if you don't want it.</li>
-        <li>Replace the colors and length values with your preferred values.</li>
-        <li>Link to the CSS file in the head of your HTML file.</li>
-        <p><strong>Optional</strong>: If your form contains multiple fieldsets:</p>
-        <li>In the HTML file, give each fieldset a unique name attribute.</li>
-        <li>For each fieldset, add this rule to the CSS file: 
-.holomenu-btn.[your fieldset's name]-border {border-color: ___}</li>
-    </ol>
-    <strong><li>Open <a href="instructions/JS.txt" target="_blank">JS.txt</a>.</li></strong>
-    <ol>
-        <li>Save this file as a .JS file to your project.</li>
-        <li>Add a script tag in the body of your HTML file, listing the JS file as the value for the src attribute.</li>
-    </ol>
-</ol>
+                <ol>
+                    <strong><li>Open <a href="instructions/HTML.txt" target="_blank">HTML.txt</a>.</li></strong>
+                    <ol>
+                        <li>Add the two included divs to your page, as direct children of the body.</li>
+                        <p>For each of your input elements:</p>
+                        <li>Add the class name "holograph-menu".</li>
+                        <li>Add the custom property "data-holomenu".</li>
+                        <li>Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.</li>
+                    </ol>
+                    <strong><li>Open <a href="instructions/CSS.txt" target="_blank">CSS.txt</a>.</li></strong>
+                    <ol>
+                        <li>Save it as a .CSS file in your project.</li>
+                        <li>Remove the optional styling at the bottom of the file if you don't want it.</li>
+                        <li>Replace the colors and length values with your preferred values.</li>
+                        <li>Link to the CSS file in the head of your HTML file.</li>
+                        <p><strong>Optional</strong>: If your form contains multiple fieldsets:</p>
+                        <li>In the HTML file, give each fieldset a unique name attribute.</li>
+                        <li>For each fieldset, add this rule to the CSS file: 
+                .holomenu-btn.[your fieldset's name]-border {border-color: ___}</li>
+                    </ol>
+                    <strong><li>Open <a href="instructions/JS.txt" target="_blank">JS.txt</a>.</li></strong>
+                    <ol>
+                        <li>Save this file as a .JS file to your project.</li>
+                        <li>Add a script tag in the body of your HTML file, listing the JS file as the value for the src attribute.</li>
+                    </ol>
+                </ol>
             </section>
             <section>
                 <p class="footnote">The word "holographic" appears in some of the ids and class names. The input menu was originally called the holographic menu, in reference to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a subsection is representative of the whole.</p>
@@ -53,40 +52,9 @@
             <section>
                 <p>Looking for the input-menu icon? On this page, the SVG is in-line in the HTML. Copies of the matching SVG files can be found here: <a href="./img/holomenu-icon_with-border.svg" target="_blank">with the border</a>, and <a href="./img/holomenu-icon_no-border.svg" target="_blank">without the border</a>.</p>
             </section>
-
-
-<!-- <p>(1) Open the <a href="instructions/HTML.txt" target="_blank">text file HTML.txt</a>.</p>
-<p></p>
-(1a) Add the two divs shown below to your page, as direct children of the body.
-For each of your input elements: 
-(1b) Add the class name class="holograph-menu".
-(1c) Add the custom property data-holomenu="".
-(1d) Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.
-
-(2) Open the <a href="" target="_blank">text file CSS.txt</a>. Follow these instructions (instructions are also listed in the file):
-(2a) Save this file as a .CSS file in your project.
-(2b) Remove the optional styling at the bottom of the file if you don't want it.
-(2c) Replace the colors and length values with your preferred values.
-(2d) Add this line to the head of your HTML document:
-     <link href="[PATH TO THE SAVED FILE]" rel="stylesheet" type="text/css" />
-
-Optional: If your form contains multiple fieldsets: 
-(2e) In the HTML file, give each fieldset a unique name attribute.
-(2f) Add to the CSS (below): 
-.holomenu-btn.[your fieldset's name]-border {border-color: ___} 
-
-(3) Open the <a href="" target="_blank">text file JS.txt</a>. Follow these instructions (instructions are also listed in the file):
-(3a) Save this file as a .JS file to your project.
-(3b) Add this line of code inside the body of your project:
-    <script src="[PATH TO THE SAVED FILE]"></script> -->
-
-
-
-
         </aside>
 
         <div class="main-contents">
-            
             <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
                 <div id="pointer-text">
                     <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
@@ -96,7 +64,6 @@ Optional: If your form contains multiple fieldsets:
                         <p id="pointer-arrow" class="bigger">&#8681</p>
                 </div>
             </div> 
-
             <div id="holograph-menu">
                 <div id="holograph-icon">
                     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +73,6 @@ Optional: If your form contains multiple fieldsets:
                 </div>
                 <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
             </div>
-
             <div id="home-link">
                 <a href="#intro" class="center-text"><p>Back to top</p></a>
             </div>
