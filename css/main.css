@@ -112,22 +112,61 @@ body {
   --fieldset-1-btns: #ffffff;
   --bkgd-form: #091b3e88;
   --greyed-out: #606060;
-  width: 90vw;
-  margin: 0 auto;
   font-family: "Verdana", sans-serif;
   background-color: var(--bkgd);
   color: var(--fonts);
-  @media screen and (hover) {
-      width: clamp(20rem, 50vw, 40rem);
-  }
 }
 .center-text {text-align: center;}
 a, legend ~ p span {color: var(--links);}
 main {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: clamp(15rem, 25vw, 20rem) clamp(25rem, 50vw, 40rem);
+    grid-template-rows: 1;
+    gap: min(5vw, 6rem);
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+.main-contents {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
+
+aside {
+  background-color: var(--bkgd-featured);
+  font-size: 0.9rem;
+  padding: 1rem;
+  @media screen and (min-width: 700px) {
+    padding: 3rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  aside section {
+    margin-top: 2.5rem;
+  }
+}
+
+ol {
+  padding: 0 0 0 1rem;
+}
+li {
+  padding: 0;
+}
+ol > ol {
+padding: 0 0 0 1rem;
+}
+ol * {
+  margin: 1.2em 0 1.2em 0;
+}
+
+
+
 #home-link {
   position: fixed;
   top: 1rem;
@@ -146,7 +185,6 @@ h1, h2 {
 h2 {color: var(--links);}
 p {line-height: 1.3em;}
 .footnote {
-  font-size: 0.8rem;
   font-style: italic;
 }
 .asterisk {color: rgb(255, 27, 50);}
@@ -199,4 +237,4 @@ input, textarea {
 }
 .buttonsWrapper button#clearForm:active {background-color: var(--bkgd);}
 .buttonsWrapper button:disabled {color: var(--greyed-out);}
-footer {margin: 2rem auto 5rem auto;}
+footer {margin: 5rem auto 2rem auto;}
