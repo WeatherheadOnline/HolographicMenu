@@ -1,5 +1,4 @@
-/* ~~ CSS instructions ~~ */
-/*
+/*** CSS instructions ***
 
 This file includes the required stying plus a few optional styles at the end. 
 
@@ -14,8 +13,9 @@ Optional: If your form contains multiple fieldsets:
 (2f) Add to the CSS (below): 
 .holomenu-btn.[your fieldset's name]-border {border-color: ___} 
 
+*****************************/
 
-*/
+
 /****************************/
 /* ~~~ Required styling ~~~ */
 /****************************/

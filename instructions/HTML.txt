@@ -1,4 +1,6 @@
-~~ HTML instructions ~~
+*************************
+*** HTML instructions ***
+*************************
 
 (1a) Add the two divs shown below to your page, as direct children of the body.
 
@@ -6,6 +8,7 @@ For each of your input elements:
 (1b) Add the class name class="holograph-menu".
 (1c) Add the custom property data-holomenu="".
 (1d) Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.
+
 
 
 <!-- Start of HTML for input menu -->
