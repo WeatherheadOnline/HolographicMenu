@@ -13,7 +13,7 @@
     <main>
         <aside>
             <section>
-                <h2 class="center-text">Instructions</h2>            
+                <h2 class="center-text">Installation instructions</h2>            
             </section>
             <section>
                 <p>Just add the included class and property to each of your form inputs. The input menu automatically populates with a button for each form input.</p>
@@ -78,14 +78,14 @@
             </div>
 
             <header>
-                <h1 class="center-text">Mobile-friendly "input menu"</h1>
-                <h2 class="center-text">Improve your users' mobile experience for form inputs</h2>    
+                <h1 class="center-text">UI generator for form inputs</h1>
+                <h2 class="center-text">Easily improve your mobile users' experience when filling in forms</h2>    
             </header>
 
             <section>
                 <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just.. reach... a bit higher... with your thumb...</p>
-                <p>This handy input-menu tool brings each of your page's form inputs within easy reach of your users' thumb.</p>
-                <p>Input menu buttons are color-coded to direct the user to checkboxes, radio buttons, or text fields. When the button is tapped: focus is placed on the matching form input; checkboxes are toggled; and radio buttons are checked.</p>
+                <p>This easily-installed input menu brings online form inputs within easy reach of your users' thumbs.</p>
+                <p>User experience is enhanced by color-coded input buttons to distinguish between checkboxes, radio buttons and text fields. When a button is tapped, focus is placed on the matching input, checkboxes are toggled, and radio buttons are checked.</p>
             </section>
 
             <section>
@@ -146,7 +146,10 @@
                         </label>
                     </fieldset>
 
-                    <p class="footnote">See the sidebar for more information and for instructions on installing the input menu in your project.</p>
+                    <!-- <p class="footnote">See the sidebar for more information and for instructions on installing the input menu in your project.</p> -->
+
+                    <p class="footnote">It's an easy way to make things easy for your users.</p>
+
 
                     <fieldset>
                         <legend>Part two of the form</legend>

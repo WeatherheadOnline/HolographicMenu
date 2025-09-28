@@ -152,6 +152,7 @@ main {
 
 
 /* ~~~ Sidebar ~~~ */
+
 aside {
   display: flex;
   flex-direction: column;
