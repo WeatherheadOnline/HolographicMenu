@@ -41,13 +41,13 @@
                     </ol>
                     <strong><li>Open <a href="instructions/JS.txt" target="_blank">JS.txt</a>.</li></strong>
                     <ol>
-                        <li>Save this file as a .JS file to your project.</li>
+                        <li>Save this file as a .JS file in your project.</li>
                         <li>Add a script tag in the body of your HTML file, listing the JS file as the value for the src attribute.</li>
                     </ol>
                 </ol>
             </section>
             <section>
-                <p class="footnote">The word "holographic" appears in some of the ids and class names. The input menu was originally called the holographic menu, in reference to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a subsection is representative of the whole.</p>
+                <p class="footnote">The word "holographic" appears in some of the ids and class names. The input menu was originally called the holographic menu, in reference to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a small part is representative of the whole.</p>
             </section>
             <section>
                 <p>Looking for the input-menu icon? On this page, the SVG is in-line in the HTML. Copies of the matching SVG files can be found here: <a href="./img/holomenu-icon_with-border.svg" target="_blank">with the border</a>, and <a href="./img/holomenu-icon_no-border.svg" target="_blank">without the border</a>.</p>
@@ -148,7 +148,7 @@
                             </label>
                         </fieldset>
 
-                        <p class="footnote">See the sidebar for installation instructions and more information.</p>
+                        <p class="footnote">The input menu would typically be hidden on desktop devices, but it's shown here for demonstration purposes. See the sidebar for installation instructions and more info.</p>
 
                         <fieldset>
                             <legend>Part two of the form</legend>
