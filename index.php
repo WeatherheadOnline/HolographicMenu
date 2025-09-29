@@ -20,6 +20,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
 </head>
 <body>
+    <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
+        <div id="pointer-text">
+            <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
+        </div>
+        <div id="pointer-symbols">
+                <p id="pointer-dismiss" class="bigger">&times;</p>
+                <p id="pointer-arrow" class="bigger">&#8681</p>
+        </div>
+    </div> 
+    <div id="holograph-menu">
+        <div id="holograph-icon">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
+                <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
+            </svg>
+        </div>
+        <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
+    </div>
+    <div id="home-link">
+        <a href="#intro" class="center-text"><p>Back to top</p></a>
+    </div>
+
     <main>
         <aside>
             <section>
@@ -67,28 +89,6 @@
         <div class="main-contents-wrapper">
             <div class="bkgd"><div class="bkgd-shape tilt-left" id="bkgd-shape-1"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-2"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-3"></div></div>
             <div class="main-contents">
-                <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
-                    <div id="pointer-text">
-                        <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
-                    </div>
-                    <div id="pointer-symbols">
-                            <p id="pointer-dismiss" class="bigger">&times;</p>
-                            <p id="pointer-arrow" class="bigger">&#8681</p>
-                    </div>
-                </div> 
-                <div id="holograph-menu">
-                    <div id="holograph-icon">
-                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
-                            <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
-                        </svg>
-                    </div>
-                    <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
-                </div>
-                <div id="home-link">
-                    <a href="#intro" class="center-text"><p>Back to top</p></a>
-                </div>
-
                 <header>
                     <h1 class="center-text">UI generator for form inputs</h1>
                     <h2 class="center-text">Easily improve your mobile users' experience when filling in forms</h2>    

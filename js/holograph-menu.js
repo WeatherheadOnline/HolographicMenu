@@ -36,6 +36,7 @@ function displayInput(inputField) {
             ${inputField.getAttribute("data-holomenu")} 
         </button>
    `;
+    console.log("hello from inside displayInput");
 }
 
 function getBorderColor(inputField) {
@@ -64,15 +65,20 @@ function holoEventListener(inputFieldTarget) {
 setTimeout(() => {
     holographButtons.innerHTML += '<span id="close-holograph-menu center-text" onclick="holoMenuOff()">&times;</span>'
 }, 500);
-
+console.log("console logs work");
 
 /* ~~~ Toggle the input menu on and off ~~~ */
 
 holoIcon.addEventListener("click", holoMenuOn);
 
 function holoMenuOn() {
-    holographButtons.style.display = "flex";
     holoIcon.style.display = "none";
+    holographButtons.style.display = "flex";
+    const buttonsHeight = holographButtons.offsetHeight;
+    const viewportHeight = window.visualViewport?.height ?? 0;
+    const topAttribute = viewportHeight - buttonsHeight - 16; // 16px = 1rem
+    console.log("Menu on, topAttribute = " + topAttribute);
+    holographButtons.style.top = `${topAttribute}px`;
 }
 
 function holoMenuOff() {
@@ -93,4 +99,17 @@ function dismissPointer() {
     pointer.style.display = "none";
     pointerDismiss.removeEventListener("click", dismissPointer);
     holoIcon.removeEventListener("click", dismissPointer);
+}
+
+
+
+window.visualViewport?.addEventListener("resize", resizeHandler);
+
+function resizeHandler() {
+    const menuHeight = holographButtons.offsetHeight; // in px
+    const viewportHeight = window.visualViewport?.height ?? 0;
+    const topAttribute = viewportHeight + window.scrollY - menuHeight - 16; // 16px = 1rem
+    // const topAttribute = 100;
+    holographButtons.style.top = `${topAttribute}px`;
+    console.log("Window resized to " + viewportHeight + ", topAttribute = " + topAttribute);
 }
