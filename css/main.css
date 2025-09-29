@@ -4,13 +4,13 @@
 
 body {
   position: relative;
-  --bkgd-gradient: #051038;
-  --bkgd-featured: #091b3e;
-  --fonts: #beecfb;
-  --links: #54cdf3;
-  --bkgd-sheer: #091b3eCC;
-  --checkbox-btn: #3e092a;
-  --radio-btn: #29093e;
+  --btn-bkgd-default: #091b3e;
+  --menu-bkgd: #091b3eCC;
+  --checkbox-btn-bkgd: #3e092a;
+  --radio-btn-bkgd: #29093e;
+  --btn-text: #54cdf3;
+  --icon-stroke: #beecfb;
+  --fieldset1-btn-border: #ffffff;  
 }
 #holograph-menu {
   position: fixed;
@@ -27,20 +27,20 @@ body {
 #holograph-icon svg {
   width: 2.2rem;
   height: auto;
-  stroke: var(--fonts);   
-  border: 3px solid var(--fonts);
+  stroke: var(--icon-stroke);   
+  border: 3px solid var(--icon-stroke);
 }
 #holograph-buttons {
   display: none;
   flex-wrap: wrap;
   justify-content: right;
   row-gap: 0.1rem;
-  background-color: var(--bkgd-sheer);
+  background-color: var(--menu-bkgd);
 }
 
 /* Color-coded button backgrounds for different input types */
-.holomenu-btn.checkbox-color {background-color: var(--checkbox-btn);}
-.holomenu-btn.radio-color {background-color: var(--radio-btn);}
+.holomenu-btn.checkbox-color {background-color: var(--checkbox-btn-bkgd);}
+.holomenu-btn.radio-color {background-color: var(--radio-btn-bkgd);}
 .holomenu-btn.text-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */} 
 .holomenu-btn.email-color {/* if nothing is specified, this defaults to generic rule for .holomenu-btn */}
 
@@ -54,17 +54,17 @@ body {
   font-size: 1rem;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--links);
-  color: var(--links);
-  background-color: var(--bkgd-featured);  
+  border-color: var(--btn-text);
+  color: var(--btn-text);
+  background-color: var(--btn-bkgd-default);  
 }
 #holograph-menu span {  /* (the input menu's "close" button) */
   padding: 0 0.5rem;
   font-size: 2rem;
   line-height: 1.5rem;
-  border: 2px solid var(--links);
-  color: var(--links);
-  background-color: var(--bkgd-featured);  
+  border: 2px solid var(--btn-text);
+  color: var(--btn-text);
+  background-color: var(--btn-bkgd-default);  
 }
 #pointer {
   z-index: 4;
@@ -74,8 +74,8 @@ body {
   transform: rotate(-10deg);
   display: flex;
   gap: 0;
-  background-color: var(--bkgd-featured);
-  border: 2px solid var(--links);
+  background-color: var(--btn-bkgd-default);
+  border: 2px solid var(--btn-text);
   p {
     margin: 0;
   }
@@ -102,10 +102,10 @@ body {
 
 #holograph-icon svg {
   border-radius: 3px;
-  background-color: var(--bkgd-featured);
+  background-color: var(--btn-bkgd-default);
 }
 #holograph-buttons {margin-bottom: 0.5rem;}
-.holomenu-btn.fieldset-1-border {border-color: var(--fieldset-1-btns);}
+.holomenu-btn.fieldset-1-border {border-color: var(--fieldset1-btn-border);}
 .holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}
 
 
@@ -119,12 +119,12 @@ body {
 }
 body {
   --bkgd: #020421;
-  --fieldset-1-btns: #ffffff;
+  --bkgd-gradient: #051038;
   --bkgd-form: #091b3e88;
   --greyed-out: #606060;
   font-family: "Verdana", sans-serif;
   background-color: var(--bkgd);
-  color: var(--fonts);
+  color: var(--icon-stroke);
 }
 main {
   width: 90vw;
@@ -151,7 +151,7 @@ h1, h2 {
   margin-right: auto;
   font-family: "Georgia", serif;
 }
-h2 {color: var(--links);}
+h2 {color: var(--btn-text);}
 aside h2 {
     margin-bottom: 1rem;
 }
@@ -160,7 +160,7 @@ p {
   margin: 1em 0;
 }
 .center-text {text-align: center;}
-a, .text-featured {color: var(--links);}
+a, .text-featured {color: var(--btn-text);}
 .footnote {font-style: italic;}
 
 
@@ -171,7 +171,7 @@ a, .text-featured {color: var(--links);}
   left: 1rem;
   width: max-content;
   padding: 0.5rem;
-  background-color: var(--bkgd-sheer)
+  background-color: var(--menu-bkgd)
 }
 #home-link p {margin: 0;}
 
@@ -181,9 +181,9 @@ aside {
   gap: 0.5rem;
   background: linear-gradient(
     to right,
-    var(--bkgd-featured),
+    var(--btn-bkgd-default),
     var(--bkgd-gradient),
-    var(--bkgd-featured)
+    var(--btn-bkgd-default)
   );
   font-size: 0.9rem;
   padding: 1.5rem 1rem;
@@ -257,9 +257,9 @@ legend {padding: 0 0.2rem;}
   padding: 0.3rem 0.5rem;
 }
 input, textarea {
-  color: var(--fonts);
+  color: var(--icon-stroke);
   background-color: var(--bkgd);
-  border: 1px solid var(--fonts);
+  border: 1px solid var(--icon-stroke);
 } 
 .side-by-side {
   width: 100%;
@@ -280,9 +280,9 @@ input, textarea {
 .buttonsWrapper button {
   padding: 0.5rem;
   font-size: 1rem;
-  color: var(--fonts);
-  border: 2px solid var(--links);
-  background-color: var(--bkgd-featured);  
+  color: var(--icon-stroke);
+  border: 2px solid var(--btn-text);
+  background-color: var(--btn-bkgd-default);  
 }
 .buttonsWrapper button#clearForm:active {background-color: var(--bkgd);}
 .buttonsWrapper button:disabled {color: var(--greyed-out);}
@@ -314,7 +314,7 @@ footer {
   position: absolute;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  border: 0.4rem solid var(--bkgd-featured);
+  border: 0.4rem solid var(--btn-bkgd-default);
   opacity: 0.8;
 }
 #bkgd-shape-1 {

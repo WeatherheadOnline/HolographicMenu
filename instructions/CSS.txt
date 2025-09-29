@@ -22,12 +22,13 @@ Optional: If your form contains multiple fieldsets:
 
 body {
   position: relative;
-  --bkgd-featured: #091b3e;
-  --fonts: #beecfb;
-  --links: #54cdf3;
-  --bkgd-sheer: #091b3eCC;
-  --checkbox-btn: #3e092a;
-  --radio-btn: #29093e;  
+  --btn-bkgd-default: #091b3e;
+  --menu-bkgd: #091b3eCC;
+  --checkbox-btn-bkgd: #3e092a;
+  --radio-btn-bkgd: #29093e;  
+  --icon-stroke: #beecfb;
+  --btn-text: #54cdf3;
+  --fieldset1-btn-border: #ffffff;  
 }
 #holograph-menu {
   position: fixed;
@@ -43,20 +44,20 @@ body {
 #holograph-icon svg {
   width: 2.2rem;
   height: auto;
-  stroke: var(--fonts);   
-  border: 3px solid var(--fonts);
+  stroke: var(--icon-stroke);   
+  border: 3px solid var(--icon-stroke);
 }
 #holograph-buttons {
   display: none;
   flex-wrap: wrap;
   justify-content: right;
   row-gap: 0.1rem;
-  background-color: var(--bkgd-sheer);
+  background-color: var(--menu-bkgd);
 }
 
 /* Color-coded button backgrounds for different input types */
-.holomenu-btn.checkbox-color {background-color: var(--checkbox-btn);}
-.holomenu-btn.radio-color {background-color: var(--radio-btn);}
+.holomenu-btn.checkbox-color {background-color: var(--checkbox-btn-bkgd);}
+.holomenu-btn.radio-color {background-color: var(--radio-btn-bkgd);}
 .holomenu-btn.text-color {/* if no background-color is specified, this defaults to generic rule for .holomenu-btn */} 
 .holomenu-btn.email-color {/* if no background-color is specified, this defaults to generic rule for .holomenu-btn */}
 
@@ -70,17 +71,17 @@ body {
   font-size: 1rem;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--links);
-  color: var(--links);
-  background-color: var(--bkgd-featured);  
+  border-color: var(--btn-text);
+  color: var(--btn-text);
+  background-color: var(--btn-bkgd-default);  
 }
 #holograph-menu span {  /* (the input menu's "close" button) */
   padding: 0 0.5rem;
   font-size: 2rem;
   line-height: 1.5rem;
-  border: 2px solid var(--links);
-  color: var(--links);
-  background-color: var(--bkgd-featured);  
+  border: 2px solid var(--btn-text);
+  color: var(--btn-text);
+  background-color: var(--btn-bkgd-default);  
 }
 #pointer {
   z-index: 4;
@@ -90,7 +91,7 @@ body {
   transform: rotate(-10deg);
   display: flex;
   gap: 0;
-  background-color: var(--bkgd-featured);
+  background-color: var(--btn-bkgd-default);
   p {
     margin: 0;
   }
@@ -118,10 +119,8 @@ body {
 
 #holograph-icon svg {
   border-radius: 3px;
-  background-color: var(--bkgd-featured);
+  background-color: var(--btn-bkgd-default);
 }
 #holograph-buttons {margin-bottom: 0.5rem;}
 .holomenu-btn.fieldset-1-border {border-color: var(--fieldset-1-btns);}
 .holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}
-
-
