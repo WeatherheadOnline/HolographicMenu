@@ -1,29 +1,10 @@
-/* *********************
-***   Instructions   ***
-************************
-(1) HTML: Add the required divs (see lines 16-34) as direct children of the body element.
-(2) HTML: Add a class name and a custom property to each input and textarea element you want to include in the input menu. 
-  (2a) Add the class name class="holograph-menu".
-  (2b) Add the custom property data-holomenu="".
-  (2c) Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.
-(3) CSS: Add the required properties (see CSS lines 3-95).
-  (3a) Substitute your preferred colors in the variable values.
-  (3b) Un-comment line 22 ("display:none") to disable the input menu on desktop.
-  (3c) Optional: If your form has multiple fieldsets: give each fieldset a unique name attribute, then add to CSS: ".holomenu-btn.[your fieldset's name]-border {border-color: ___}" (see CSS line 46). 
-(4) JS: Add the JS code (shown below) to your page. (If you add it as a separate .js file, don't forget to add a script tag for it in your HTML file.)
-
-Cheat sheet: 
-- To add an input field to the menu: give it the class name "holograph-menu".
-- To change how each input's name appears in the menu: change the value of its "data-holomenu" property.
-*/
-
-
 /* ~~~ Generate the menu buttons ~~~ */
 
 const inputElements = Array.from(document.getElementsByClassName("holograph-menu"));
 const holographButtons = document.getElementById("holograph-buttons");
 const holoIcon = document.getElementById("holograph-icon");
 const closeHoloMenu = document.getElementById("close-holograph-menu");
+const holographMenu = document.getElementById("holograph-menu");
 
 inputElements.forEach(displayInput);
 
@@ -36,7 +17,6 @@ function displayInput(inputField) {
             ${inputField.getAttribute("data-holomenu")} 
         </button>
    `;
-    console.log("hello from inside displayInput");
 }
 
 function getBorderColor(inputField) {
@@ -53,10 +33,31 @@ function getBorderColor(inputField) {
 function holoEventListener(inputFieldTarget) {
     if (inputFieldTarget.type === "checkbox") {
         inputFieldTarget.checked = !inputFieldTarget.checked;
+        moveKeyboardDown();
     } else if (inputFieldTarget.type === "radio") {
         inputFieldTarget.checked = true;
+        moveKeyboardDown();
+    } else if (inputFieldTarget.type === "text" || inputFieldTarget.type === "email" || inputFieldTarget.tagName === "TEXTAREA") {
+        moveKeyboardUp();
+        console.log("text field detected");
     }; 
     inputFieldTarget.focus();
+}
+
+
+function moveKeyboardUp() {
+    console.log("hello from inside moveKeyboard()");
+    const menuHeight = holographMenu.offsetHeight; // in px
+    const viewportHeight = window.visualViewport?.height ?? 0;
+    const topAttribute = viewportHeight + window.scrollY - menuHeight; 
+    // const topAttribute = 100;
+    holographMenu.style.bottom = "unset";
+    holographMenu.style.top = `${topAttribute}px`;
+}
+
+function moveKeyboardDown() {
+    holographMenu.style.top = "unset";
+    holographMenu.style.bottom = "1rem";
 }
 
 
@@ -65,7 +66,6 @@ function holoEventListener(inputFieldTarget) {
 setTimeout(() => {
     holographButtons.innerHTML += '<span id="close-holograph-menu center-text" onclick="holoMenuOff()">&times;</span>'
 }, 500);
-console.log("console logs work");
 
 /* ~~~ Toggle the input menu on and off ~~~ */
 
@@ -74,16 +74,12 @@ holoIcon.addEventListener("click", holoMenuOn);
 function holoMenuOn() {
     holoIcon.style.display = "none";
     holographButtons.style.display = "flex";
-    const buttonsHeight = holographButtons.offsetHeight;
-    const viewportHeight = window.visualViewport?.height ?? 0;
-    const topAttribute = viewportHeight - buttonsHeight - 16; // 16px = 1rem
-    console.log("Menu on, topAttribute = " + topAttribute);
-    holographButtons.style.top = `${topAttribute}px`;
 }
 
 function holoMenuOff() {
     holographButtons.style.display = "none";
     holoIcon.style.display = "block";
+    moveKeyboardDown();
 }
 
 
@@ -99,17 +95,4 @@ function dismissPointer() {
     pointer.style.display = "none";
     pointerDismiss.removeEventListener("click", dismissPointer);
     holoIcon.removeEventListener("click", dismissPointer);
-}
-
-
-
-window.visualViewport?.addEventListener("resize", resizeHandler);
-
-function resizeHandler() {
-    const menuHeight = holographButtons.offsetHeight; // in px
-    const viewportHeight = window.visualViewport?.height ?? 0;
-    const topAttribute = viewportHeight + window.scrollY - menuHeight - 16; // 16px = 1rem
-    // const topAttribute = 100;
-    holographButtons.style.top = `${topAttribute}px`;
-    console.log("Window resized to " + viewportHeight + ", topAttribute = " + topAttribute);
 }
