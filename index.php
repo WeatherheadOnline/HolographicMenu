@@ -20,6 +20,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
 </head>
 <body>
+    <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
+        <div id="pointer-text">
+            <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
+        </div>
+        <div id="pointer-symbols">
+                <p id="pointer-dismiss" class="bigger">&times;</p>
+                <p id="pointer-arrow" class="bigger">&#8681</p>
+        </div>
+    </div> 
+
+    <div id="holograph-menu">
+        <div id="holograph-icon">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
+                <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
+            </svg>
+        </div>
+        <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
+    </div>
+    
+    <div id="home-link">
+        <a href="#intro" class="center-text"><p>Back to top</p></a>
+    </div>
+
     <main>
         <aside>
             <section>
@@ -67,27 +91,6 @@
         <div class="main-contents-wrapper">
             <div class="bkgd"><div class="bkgd-shape tilt-left" id="bkgd-shape-1"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-2"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-3"></div></div>
             <div class="main-contents">
-                <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
-                    <div id="pointer-text">
-                        <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
-                    </div>
-                    <div id="pointer-symbols">
-                            <p id="pointer-dismiss" class="bigger">&times;</p>
-                            <p id="pointer-arrow" class="bigger">&#8681</p>
-                    </div>
-                </div> 
-                <div id="holograph-menu">
-                    <div id="holograph-icon">
-                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
-                            <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
-                        </svg>
-                    </div>
-                    <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
-                </div>
-                <div id="home-link">
-                    <a href="#intro" class="center-text"><p>Back to top</p></a>
-                </div>
 
                 <header>
                     <h1 class="center-text">UI generator for form inputs</h1>
@@ -188,7 +191,6 @@
                 </section>
                 
                 <section>
-                    <p>The one downside of this tool is that the menu becomes hidden by the on-screen keyboard. In the future, there will be a way to fix this issue, after the <a href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API" target="_blank">VirtualKeyboard API</a> gains wider browser support. (As a user, I still find it easier to use the input menu and then minimize the keyboard after each input, as both are within easy reach using my thumb.)</p>
                     <p>If you have any questions, or any suggestions for improvement, please let me know. My email address is listed in the <a href="../#Contact" target="_blank">contact section</a> of my portfolio site.</p>
                 </section>
             </div>

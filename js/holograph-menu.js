@@ -23,7 +23,6 @@ Cheat sheet:
 const inputElements = Array.from(document.getElementsByClassName("holograph-menu"));
 const holographButtons = document.getElementById("holograph-buttons");
 const holoIcon = document.getElementById("holograph-icon");
-const closeHoloMenu = document.getElementById("close-holograph-menu");
 
 inputElements.forEach(displayInput);
 
@@ -62,7 +61,11 @@ function holoEventListener(inputFieldTarget) {
 /* ~~~ Add a "close" button to the input menu after all the other buttons are added ~~~*/
 
 setTimeout(() => {
-    holographButtons.innerHTML += '<span id="close-holograph-menu center-text" onclick="holoMenuOff()">&times;</span>'
+    holographButtons.innerHTML += `
+        <span id="close-holograph-menu center-text" onclick="holoMenuOff()">
+            &times;
+        </span>
+    `
 }, 500);
 
 
