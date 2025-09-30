@@ -143,9 +143,8 @@ main {
 		margin: 0 auto;
 	}
 }
-header {
-	position: relative;
-}
+#home-link {z-index: 2;}
+header {position: relative;}
 #tool-title {
 	position: absolute;
 	top: -0.5rem;

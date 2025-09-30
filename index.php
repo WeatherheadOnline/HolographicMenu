@@ -10,16 +10,18 @@
     <meta name="robots" content="follow, index">
     <meta property="og:title" content="Holographic Menu">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.weatherheadonline.com/holographic-menu">
-    <meta property="og:image" content="img/meta-img.png">
+    <meta property="og:url" content="http://www.weatherheadonline.com/holographic-menu/">
+    <meta name="image" property="og:image" content="http://www.weatherheadonline.com/holographic-menu/img/ogimage.jpg">
     <meta property="og:description" content="Holographic Menu: UI generator for form inputs on mobile. Easily improve your mobile users' experience when filling in forms.">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
     <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>Holographic Menu</title>
 </head>
 <body>
+    <img style="display: none" src="img/ogimage.jpg">
     
     <div id="holograph-menu">
         <div id="pointer" class="center-text">   <!-- A one-time hint to show users the way -->
