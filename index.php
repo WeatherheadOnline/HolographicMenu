@@ -6,13 +6,13 @@
     <meta name="revised" content="Friday, September 26th, 2025, 7:00 pm">
     <meta name="author" content="Eddie Weatherhead">
     <meta name="language" content="english">
-    <meta name="description" content="UI generator for form inputs on mobile">
+    <meta name="description" content="Holographic Menu: UI generator for form inputs on mobile. Easily improve your mobile users' experience when filling in forms.">
     <meta name="robots" content="follow, index">
-    <!-- <meta property="og:title" content="UI generator for form inputs on mobile">
+    <meta property="og:title" content="Holographic Menu">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.weatherheadonline.com/input-menu">
-    <meta property="og:image" content="">
-    <meta property="og:description" content=""> -->
+    <meta property="og:url" content="http://www.weatherheadonline.com/holographic-menu">
+    <meta property="og:image" content="img/meta-img.png">
+    <meta property="og:description" content="Holographic Menu: UI generator for form inputs on mobile. Easily improve your mobile users' experience when filling in forms.">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +91,7 @@
             <div class="bkgd"><div class="bkgd-shape tilt-left" id="bkgd-shape-1"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-2"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-3"></div></div>
             <div class="main-contents">
 
-                <header class="center-text">
+                <header class="center-text" id="intro">
                     <p id="tool-title">Holographic menu</p>
                     <h1>UI generator for form inputs</h1>
                     <h2>Easily improve your mobile users' experience when filling in forms</h2>    
@@ -168,8 +168,8 @@
                             <p>Its matching input-menu buttons have a <span class="text-featured">different colored border</span>.</p>
 
                             <div class="side-by-side">
-                                <label for="name" class="labelText">A required field<span class="asterisk">*</span>
-                                    <input type="text" id="name" class="inputText holograph-menu" name="name" data-holomenu="Required field 2" required >
+                                <label for="userName2" class="labelText">A required field<span class="asterisk">*</span>
+                                    <input type="text" id="userName2" class="inputText holograph-menu" name="userName2" data-holomenu="Required field 2" required >
                                 </label>
                                 <label for="messageSubject2" class="labelText gap-below">Optional text
                                     <input type="text" id="messageSubject2" class="inputText holograph-menu" name="subject2" data-holomenu="Optional field 2" >
