@@ -30,6 +30,8 @@ function displayInput(inputField) {
     btnID = inputField.getAttribute("name") + "-holo";
     colorClass = inputField.getAttribute("type") + "-color";
     const borderClass = getBorderColor(inputField);
+    console.log(inputField);
+    console.log(inputField.id);
     holographButtons.innerHTML += `
         <button id=${btnID} class="holomenu-btn ${colorClass} ${borderClass}" onclick="holoEventListener(${inputField.id})">
             ${inputField.getAttribute("data-holomenu")} 

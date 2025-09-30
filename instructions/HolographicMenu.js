@@ -1,8 +1,8 @@
 /* *** JS instructions *****
 
-(3a) Save this file as a .JS file to your project.
+(3a) Save this file to your project.
 (3b) Add this line of code inside the body of your project:
-    <script src="[PATH TO THE SAVED FILE]"></script>
+    <script src="[YOUR FILE PATH]HolographicMenu.js"></script>
 
 ***************************/
 

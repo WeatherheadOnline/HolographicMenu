@@ -2,13 +2,13 @@
 
 This file includes the required stying plus a few optional styles at the end. 
 
-(2a) Save this file as a .CSS file in your project.
+(2a) Save this file in your project.
 (2b) Remove the optional styling at the bottom of the file if you don't want it.
 (2c) Replace the colors and length values with your preferred values.
 (2d) Add this line to the head of your HTML document:
-     <link href="[PATH TO THE SAVED FILE]" rel="stylesheet" type="text/css" />
+     <link href="[YOUR FILE PATH]HolographicMenu.css" rel="stylesheet" type="text/css" />
 
-Optional: If your form contains multiple fieldsets: 
+Optional: If your form contains multiple fieldsets, color-coordinate their buttons' borders: 
 (2e) In the HTML file, give each fieldset a unique name attribute.
 (2f) Add to the CSS (below): 
 .holomenu-btn.[your fieldset's name]-border {border-color: ___} 
@@ -28,7 +28,6 @@ body {
   --radio-btn-bkgd: #29093e;  
   --icon-stroke: #beecfb;
   --btn-text: #54cdf3;
-  --fieldset1-btn-border: #ffffff;  
 }
 #holograph-menu {
   position: fixed;
@@ -36,7 +35,7 @@ body {
   right: 1rem;  
   z-index: 4;
   @media screen and (hover) {
-     /*  This line prevents the input menu from showing up on desktop  devices */
+     /*  This line prevents the input menu from showing up on desktop devices: */
      display: none;
   }
 }    
@@ -122,5 +121,4 @@ body {
   background-color: var(--btn-bkgd-default);
 }
 #holograph-buttons {margin-bottom: 0.5rem;}
-.holomenu-btn.fieldset-1-border {border-color: var(--fieldset-1-btns);}
 .holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}

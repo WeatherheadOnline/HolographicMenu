@@ -20,17 +20,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
 </head>
 <body>
-    <div id="pointer" class="center-text">   <!-- A one-time tooltip to show users the way -->
-        <div id="pointer-text">
-            <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
-        </div>
-        <div id="pointer-symbols">
-                <p id="pointer-dismiss" class="bigger">&times;</p>
-                <p id="pointer-arrow" class="bigger">&#8681</p>
-        </div>
-    </div> 
-
+    
     <div id="holograph-menu">
+        <div id="pointer" class="center-text">   <!-- A one-time hint to show users the way -->
+            <div id="pointer-text">
+                <p>Use this menu</p><p>to reach form fields</p><p>more easily</p><p>with your thumb</p>
+            </div>
+            <div id="pointer-symbols">
+                    <p id="pointer-dismiss" class="bigger">&times;</p>
+                    <p id="pointer-arrow" class="bigger">&#8681</p>
+            </div>
+        </div> 
         <div id="holograph-icon">
             <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
@@ -54,37 +54,36 @@
             </section>
             <section>
                 <ol>
-                    <strong><li>Open <a href="instructions/HTML.txt" target="_blank">HTML.txt</a>.</li></strong>
+                    <strong><li>Open <a href="instructions/RequiredDiv.txt" target="_blank">RequiredDiv.txt</a>.</li></strong>
                     <ol>
-                        <li>Add the two included divs to your page, as direct children of the body.</li>
-                        <p>For each of your input elements:</p>
+                        <li>Add the included div to your page, as a direct child of the body.</li>
+                        <p>For each input element (including textarea elements):</p>
                         <li>Add the class name "holograph-menu".</li>
                         <li>Add the custom property "data-holomenu".</li>
-                        <li>Add a value to the custom property. This determines the text the user sees on the matching button in the input menu.</li>
+                        <li>Add a value to the custom property. This determines the text the user sees on the matching button in the input menu, so shorter is better.</li>
                     </ol>
-                    <strong><li>Open <a href="instructions/CSS.txt" target="_blank">CSS.txt</a>.</li></strong>
+                    <strong><li>Open <a href="instructions/HolographicMenu.css" target="_blank">HolographicMenu.css</a>.</li></strong>
                     <ol>
-                        <li>Save it as a .CSS file in your project.</li>
+                        <li>Save it to your project.</li>
                         <li>Remove the optional styling at the bottom of the file if you don't want it.</li>
                         <li>Replace the colors and length values with your preferred values.</li>
                         <li>Link to the CSS file in the head of your HTML file.</li>
-                        <p><strong>Optional</strong>: If your form contains multiple fieldsets:</p>
-                        <li>In the HTML file, give each fieldset a unique name attribute.</li>
-                        <li>For each fieldset, add this rule to the CSS file: 
+                        <p><strong>Optional</strong>: If your form contains multiple fieldsets, color-coordinate their buttons' borders:</p>
+                        <li>In the HTML file, give each fieldset a unique name attribute. For each fieldset, add this rule to the CSS file: 
                 .holomenu-btn.[your fieldset's name]-border {border-color: ___}</li>
                     </ol>
-                    <strong><li>Open <a href="instructions/JS.txt" target="_blank">JS.txt</a>.</li></strong>
+                    <strong><li>Open <a href="instructions/HolographicMenu.js" target="_blank">HolographicMenu.js</a>.</li></strong>
                     <ol>
-                        <li>Save this file as a .JS file in your project.</li>
+                        <li>Save this file to your project.</li>
                         <li>Add a script tag in the body of your HTML file, listing the JS file as the value for the src attribute.</li>
                     </ol>
                 </ol>
             </section>
             <section>
-                <p class="footnote">The word "holographic" appears in some of the ids and class names. The input menu was originally called the holographic menu, in reference to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a small part is representative of the whole.</p>
+                <p class="footnote">The input menu is designed for mobile, and it's turned off by default for desktop devices. If you've installed it and would like to test it out on desktop, comment out line 39 in HolographicMenu.css ("display: none;").</p>
             </section>
             <section>
-                <p>Looking for the input-menu icon? On this page, the SVG is in-line in the HTML. Copies of the matching SVG files can be found here: <a href="./img/holomenu-icon_with-border.svg" target="_blank">with the border</a>, and <a href="./img/holomenu-icon_no-border.svg" target="_blank">without the border</a>.</p>
+                <p>Looking for a copy of the input-menu icon? The SVG files can be found here: <a href="./img/holomenu-icon_with-border.svg" target="_blank">with the border</a>, and <a href="./img/holomenu-icon_no-border.svg" target="_blank">without the border</a>. (On this page, the SVG is in-line in the HTML.)</p>
             </section>
         </aside>
 
@@ -92,14 +91,15 @@
             <div class="bkgd"><div class="bkgd-shape tilt-left" id="bkgd-shape-1"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-2"></div><div class="bkgd-shape tilt-right" id="bkgd-shape-3"></div></div>
             <div class="main-contents">
 
-                <header>
-                    <h1 class="center-text">UI generator for form inputs</h1>
-                    <h2 class="center-text">Easily improve your mobile users' experience when filling in forms</h2>    
+                <header class="center-text">
+                    <p id="tool-title">Holographic menu</p>
+                    <h1>UI generator for form inputs</h1>
+                    <h2>Easily improve your mobile users' experience when filling in forms</h2>    
                 </header>
 
                 <section>
-                    <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just.. reach... a bit higher... with your thumb...</p>
-                    <p>This easily-installed input menu brings online form inputs within easy reach of your users' thumbs.</p>
+                    <p>Form input fields can be difficult to reach when you're using your mobile device one-handed. If you could just... reach... a bit higher... with your thumb...</p>
+                    <p>This easily-installed input menu brings online form inputs within reach of your users' thumbs.</p>
                     <p>User experience is enhanced by color-coded input buttons to distinguish between checkboxes, radio buttons and text fields. When a button is tapped, focus is placed on the matching input, checkboxes are toggled, and radio buttons are checked.</p>
                 </section>
 
@@ -163,13 +163,13 @@
 
                         <p class="footnote">The input menu would typically be hidden on desktop devices, but it's shown here for demonstration purposes. See the sidebar for installation instructions and more info.</p>
 
-                        <fieldset>
+                        <fieldset name="fieldset-2">
                             <legend>Part two of the form</legend>
                             <p>Its matching input-menu buttons have a <span class="text-featured">different colored border</span>.</p>
 
                             <div class="side-by-side">
-                                <label for="userName2" class="labelText">A required field<span class="asterisk">*</span>
-                                    <input type="text" id="userName2" class="inputText holograph-menu" name="userName2" data-holomenu="Required field 2" required >
+                                <label for="name" class="labelText">A required field<span class="asterisk">*</span>
+                                    <input type="text" id="name" class="inputText holograph-menu" name="name" data-holomenu="Required field 2" required >
                                 </label>
                                 <label for="messageSubject2" class="labelText gap-below">Optional text
                                     <input type="text" id="messageSubject2" class="inputText holograph-menu" name="subject2" data-holomenu="Optional field 2" >
@@ -191,7 +191,8 @@
                 </section>
                 
                 <section>
-                    <p>If you have any questions, or any suggestions for improvement, please let me know. My email address is listed in the <a href="../#Contact" target="_blank">contact section</a> of my portfolio site.</p>
+                    <p class="footnote">The name "holographic menu" refers to the phenomenon in <a href="https://en.wikipedia.org/wiki/Holography" target="_blank">holographics</a> where a small part is representative of the whole. Here, a small part of the screen is representative of the larger page.</p>
+                    <p>If you have any questions, or suggestions for improvement, please let me know. My email address is listed in the <a href="../#Contact" target="_blank">contact section</a> of my portfolio site.</p>
                 </section>
             </div>
         </div>
