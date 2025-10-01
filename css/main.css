@@ -173,7 +173,6 @@ header {position: relative;}
 	from {background-position: -10rem;}
 	to {background-position: 10rem;}
 }
-
 h1 {
 	margin-top: 3.5rem;   /* to stay away from the "back to top" link */
 	margin-bottom: 2rem;
@@ -192,9 +191,9 @@ p {
 }
 .center-text {text-align: center;}
 a {color: var(--btn-text);}
+a:hover {color: var(--fieldset2-btn-border);}
+a:hover {color: }
 .footnote {font-style: italic;}
-/* #fieldset-1 .text-featured {color: var(--fieldset1-btn-border);}
-#fieldset-2 .text-featured {color: var(--fieldset2-btn-border);} */
 fieldset[name="fieldset-1"] .text-featured {color: var(--fieldset1-btn-border);}
 fieldset[name="fieldset-2"] .text-featured {color: var(--fieldset2-btn-border);}
 
@@ -213,7 +212,6 @@ fieldset[name="fieldset-2"] .text-featured {color: var(--fieldset2-btn-border);}
 	}
 }
 #home-link p {margin: 0;}
-
 aside {
 	display: flex;
 	flex-direction: column;
@@ -233,18 +231,9 @@ aside {
 }
 ol {padding: 0 0 0 1rem;}
 li {padding: 0;}
-ol > ol {
-	list-style-type: lower-alpha;
-}
-ol * {margin: 1.2em 0 1.2em 0;}
-ol > ol:not(:last-of-type) {
-	margin-bottom: 2rem;
-}
-
-
-/* ol > ol > li {
-	color: red;
-} */
+ol > ol {list-style-type: lower-alpha;}
+ol * {margin: 1.2em 0;}
+ol > ol:not(:last-of-type) {margin-bottom: 2rem;}
 
 
 /* ~~~ Main contents ~~~ */
