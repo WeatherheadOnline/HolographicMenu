@@ -205,9 +205,12 @@ fieldset[name="fieldset-2"] .text-featured {color: var(--fieldset2-btn-border);}
 	position: fixed;
 	top: 1rem;
 	left: 1rem;
-	width: max-content;
+	width: min-content;
 	padding: 0.5rem;
-	background-color: var(--menu-bkgd)
+	background-color: var(--menu-bkgd);
+	@media screen and (min-width: 700px) {
+		width: max-content;
+	}
 }
 #home-link p {margin: 0;}
 
