@@ -42,12 +42,14 @@
         <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
     </div>
     
-    <div id="home-link">
-        <a href="#intro" class="center-text"><p>Back to top</p></a>
-    </div>
-
     <main>
         <aside>
+            <section>
+                <h2 class="center-text">External links</h2>
+            </section>
+            <section>
+                <p>The holographic menu can be found on <a href="https://github.com/WeatherheadOnline/HolographicMenuTool/tree/main" target="_blank">GitHub</a>. A simple demo is shown on <a href="https://codepen.io/WeatherheadOnline/pen/MYKYzpo" target="_blank">codepen</a>.</p>
+            </section>
             <section>
                 <h2 class="center-text">Installation instructions</h2>            
             </section>
